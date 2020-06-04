@@ -1,0 +1,26 @@
+# Site settings
+title: AndreLDM Blog
+email: andre42m@gmail.com
+description: >
+  A blog dedicated to programming tricks (mostly JavaScript and Java...),
+  Libraries & Frameworks, software design & architecture, Tools, Linux related
+  things and anything else I find meaningful and useful to share.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://andreldm.com" # the base hostname & protocol for your site
+github_username:  andreldm
+permalink: /:year/:month/:day/:title.html
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true

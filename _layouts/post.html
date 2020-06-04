@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h2 class="post-title">{{ page.title }}</h2>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.tags %} • {{ page.tags|join: ', ' }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+  {% if page.comments and jekyll.environment == "production" %}
+    <div class="show-comments">
+      <button id="show-comments-button" onclick="disqus(); return false;">Show Comments</button>
+    </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_loaded = false;
+
+      var disqus_config = function () {
+          this.page.url = 'https://andreldm.com{{ page.url }}';
+          this.page.identifier = '{{ page.id }}';
+      };
+
+      function disqus() {
+        if (disqus_loaded) return;
+        disqus_loaded = true;
+
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//andreldm.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+
+        // Hide the button after loading comments
+        d.getElementById("show-comments-button").style.display = "none";
+      }
+
+      // Load comments when linked to directly
+      var hash = window.location.hash.substr(1);
+      if (hash.length > 8 && hash.substring(0, 8) == "comment-")
+        disqus();
+
+      // Load comments for search engines
+      if(/bot|google|baidu|bing|msn|duckduckgo|slurp|yandex/i.test(navigator.userAgent))
+        disqus();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  {% endif %}
+
+</div>

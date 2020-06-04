@@ -1,0 +1,158 @@
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    color: #818a91;
+    padding: 5px 0;
+}
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+
+    h1 {
+      @include media-query($on-mobile) {
+          font-size: 1.2rem;
+      }
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+}
+
+
+
+/**
+ * Posts
+ */
+.post-title {
+    font-size: 2.5rem;
+
+    @include media-query($on-mobile) {
+        font-size: 1.2rem;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+        padding-top: 0.8rem;
+
+        @include media-query($on-mobile) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-mobile) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-mobile) {
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+/**
+ * Site Header
+ */
+.site-header {
+  background-color: #373a3c;
+  margin-bottom: 1.8rem;
+}
+
+.navbar {
+  display: flex;
+  align-items : center;
+  justify-content: space-between;
+  padding: 3px 0;
+
+  @include media-query($on-mobile) {
+    padding: 8px 0;
+  }
+
+  .brand {
+    font-family: $brand-font-family;
+    font-size: 1.5rem;
+    color: $brand-color;
+
+    @include media-query($on-mobile) {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .icon {
+    padding-left: 6px;
+  }
+
+  .link {
+    line-height: 1rem;
+    padding-left: 12px;
+    color: #9b9d9e;
+    vertical-align: middle;
+
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+/**
+ * Comments Button
+ */
+ .show-comments button {
+  background-color: $brand-color;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 20px;
+  margin: 32px auto;
+  width: 80%;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}

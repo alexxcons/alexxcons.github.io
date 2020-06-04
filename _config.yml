@@ -1,13 +1,13 @@
 # Site settings
 title: Alexxcons Software Development Blog
-email: andre42m@gmail.com
+email: acs82@gmx.de
 description: >
   Blog to tell about my personal Linux software development experiences,
   in the hope that it might be of interest to others.
   I am mostly using C and gtk, though I will share everything which might be of interest.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://BuySomeUrl.com" # the base hostname & protocol for your site
+url: "https://alexxcons.github.io" # the base hostname & protocol for your site
 github_username:  alexxcons
 permalink: /:year/:month/:day/:title.html
 

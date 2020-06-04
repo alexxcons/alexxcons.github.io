@@ -1,9 +1,10 @@
 # Site settings
-title: Alexxcons Software Development Blog
+title: Alexxcon's Software Development Blog
 email: acs82@gmx.de
 description: >
   Blog to tell about my personal Linux software development experiences,
   in the hope that it might be of interest to others.
+
   I am mostly using C and gtk, though I will share everything which might be of interest.
 
 baseurl: "" # the subpath of your site, e.g. /blog/

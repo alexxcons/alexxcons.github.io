@@ -1,13 +1,14 @@
 # Site settings
-title: AndreLDM Blog
+title: Alexxcons Software Development Blog
 email: andre42m@gmail.com
 description: >
-  A blog dedicated to programming tricks (mostly JavaScript and Java...),
-  Libraries & Frameworks, software design & architecture, Tools, Linux related
-  things and anything else I find meaningful and useful to share.
+  Blog to tell about my personal Linux software development experiences,
+  in the hope that it might be of interest to others.
+  I am mostly using C and gtk, though I will share everything which might be of interest.
+
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://andreldm.com" # the base hostname & protocol for your site
-github_username:  andreldm
+url: "https://BuySomeUrl.com" # the base hostname & protocol for your site
+github_username:  alexxcons
 permalink: /:year/:month/:day/:title.html
 
 # Build settings

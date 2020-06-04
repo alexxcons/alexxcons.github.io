@@ -12,7 +12,7 @@ layout: default
     {{ content }}
   </article>
 
-  {% if page.comments and jekyll.environment == "production" %}
+<!--    {% if page.comments and jekyll.environment == "production" %}
     <div class="show-comments">
       <button id="show-comments-button" onclick="disqus(); return false;">Show Comments</button>
     </div>
@@ -22,7 +22,7 @@ layout: default
       var disqus_loaded = false;
 
       var disqus_config = function () {
-          this.page.url = 'https://andreldm.com{{ page.url }}';
+          this.page.url = 'https://alexxcons.github.io{{ page.url }}';
           this.page.identifier = '{{ page.id }}';
       };
 
@@ -51,5 +51,5 @@ layout: default
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   {% endif %}
-
+-->
 </div>

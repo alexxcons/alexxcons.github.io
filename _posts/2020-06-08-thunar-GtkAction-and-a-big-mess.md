@@ -12,13 +12,13 @@ Actually I just wanted to fix [#198 (Merge all file-context-menus into one)](htt
 
 .. but lets start at the beginning:
 
-The old Thunar used to create the same menu items in different places using different code. In the past that led to inconsitancies. E.g. the location bar only provided a very minimal context menu, no custom actions at all.
+The old Thunar used to create the same menu items in different places using different code. In the past that led to inconsistencies. E.g. the location bar only provided a very minimal context menu, no custom actions at all.
 
 <add picture>
 
 From time to time I found myself right-clicking on a location-button, just to find out that there still is no custom action. At some point of maximal annoyance I decided to fix that problem ... not sure if I would have done so when I knew how long that road would be.
 
-Looking at thunar-location-buttons.c revealed alot of duplicated code. The thunar-standard-view and thunar-window both use the deprecated GtkActionEntry to define menu item labels and related actions. The location buttons just mirrored parts of that code.
+Looking at thunar-location-buttons.c revealed a lot of duplicated code. The thunar-standard-view and thunar-window both use the deprecated GtkActionEntry to define menu item labels and related actions. The location buttons just mirrored parts of that code.
 
 So yay, lets just copy+paste the missing stuff to the location buttons?
 Nah, that would be too easy. As a developer who values [DRY](https://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself), it would hurt my belief in clean code to produce more mess.
@@ -33,23 +33,23 @@ The doc. of GAction told that it should not be used for anything related to labe
 
 Retrospective ignoring "GAction" might not have been my smartest move. Meanwhile I understood how GAction can be used with GtkMenu, and I will most likely go for that combination at some later point.
 
-Regarding GtkUiManager: The definition of menu-items of thunar were scattered across 7 different *-ui.xml files, making it hard to figure out what belongs together. Because of that I decided to just get rid of GtkUiManager, and create menu-items in the code instead of predefining their order in xml. IMO the usage of xml files to build GUI's might be nice for static GUI's, though IMO for dynamic menu-creation it just introduces unnecesarry complexity.
+Regarding GtkUiManager: The definition of menu-items of thunar were scattered across 7 different *-ui.xml files, making it hard to figure out what belongs together. Because of that I decided to just get rid of GtkUiManager, and create menu-items in the code instead of predefining their order in xml. IMO the usage of xml files to build GUI's might be nice for static GUI's, though IMO for dynamic menu-creation it just introduces unnecessary complexity.
 
-So I started to build XfceGtkActionEntry and some support methods. XfceGtkActionEntry is a structure which holds labels, tooltips, icons, types, the accelerstor pathes and a callbacks to the related actions. Since it is just a struct, it can be filled in a static way, just like GtkActionEntry.
+So I started to build XfceGtkActionEntry and some support methods. XfceGtkActionEntry is a structure which holds labels, tooltips, icons, types, the accelerator paths and a callbacks to the related actions. Since it is just a struct, it can be filled in a static way, just like GtkActionEntry.
 
 Next problem: The menus in thunar so far did not get destroyed, but were updated whenever the selected items got changed, and got shown when needed. That sounded wrong to me. Why should I want to update menu-items while no menu is visible at all ?
-There were bugs about menu-flickering and slowness while rubberbanding/mass select which seem to be related. Since I anyhow needed to touch that part, I decided to build menus only when they need to be shown.
+There were bugs about menu-flickering and slowness while rubber banding/mass select which seem to be related. Since I anyhow needed to touch that part, I decided to build menus only when they need to be shown.
 
 Things went well, I was about to introduce XfceGtkActionEntry to the thunar-window menu .. and than shit hit the fan.
-So far the window-menu was always present and took care for any acceleartor actions. Since my concept was "create menu on request", there was no menu-instance which could take care for accelerators any more, leading to disfunctional accelerator keys. :F
+So far the window-menu was always present and took care for any accelerator actions. Since my concept was "create menu on request", there was no menu-instance which could take care for accelerators any more, leading to dysfunctional accelerator keys. :F
 
-After some time of grieve and self-hatred I fixed that problem by moving most of the code from thunar-menu to thunar-launcher, which lifetime is coupled to thunar-window. Thunar launcher was already the home of some actions from the file-menu before. I just abused it even more (I guess the orginal intention of the launcher was, to actually launch thing, not to manage menu-items)
-From now on thunar-menu is more or less just an conveniance wrapper for thunar-launcher ... still usefull, but sadly it lost its glory. However finally accelerators started to work, and I was able to continue to figth with the window-menu. 
+After some time of grieve and self-hatred I fixed that problem by moving most of the code from thunar-menu to thunar-launcher, which lifetime is coupled to thunar-window. Thunar launcher was already the home of some actions from the file-menu before. I just abused it even more (I guess the original intention of the launcher was, to actually launch thing, not to manage menu-items)
+From now on thunar-menu is more or less just an convenience wrapper for thunar-launcher ... still useful, but sadly it lost its glory. However finally accelerators started to work, and I was able to continue to fight with the window-menu.
 I had much more trouble with that menu, too much to tell it here .. however somehow I managed to get it functional, so that it mostly worked like before.
 
-Later on I found out that gtk_accel_map, which I use alot is going to be deprecated soon. So it seems like I anyhow will need to touch the accelerator part again. This time I plan to make use of the GActionMap interface .. going to be a story for another day.
+Later on I found out that gtk_accel_map, which I use a lot is going to be deprecated soon. So it seems like I anyhow will need to touch the accelerator part again. This time I plan to make use of the GActionMap interface .. going to be a story for another day.
 
-For first testing and code-review I luckily I got support of some early adoptors. They found many more defects and regressions which kept me busy a long while. Though luckily nothing concept-breaking.
+For first testing and code-review I luckily I got support of some early adopters. They found many more defects and regressions which kept me busy a long while. Though luckily nothing concept-breaking.
 
 While writing this, there are still some regressions which I introduced, waiting to get fixed by me:
 * [Regression: Window menu not updated when using ALT+mnemonic key](https://gitlab.xfce.org/xfce/thunar/-/issues/320)
@@ -62,9 +62,9 @@ And there are some tasks on my agenda, for which I just did not find the time so
 * use thunar-menu in Tree view
 * and many minor things
 
-Finally I ended up with 25 commits and +4717 / -7149 line changes. The occurance of G_GNUC_BEGIN_IGNORE_DEPRECATIONS got reduced from 250 to 35, which will further drop when using GtkMenu for bookmark-view/tree-view. That should simplify the move to gtk4 in the future. So overall, the result does not look too bad I guess.
+Finally I ended up with 25 commits and +4717 / -7149 line changes. The occurrence of G_GNUC_BEGIN_IGNORE_DEPRECATIONS got reduced from 250 to 35, which will further drop when using GtkMenu for bookmark-view/tree-view. That should simplify the move to gtk4 in the future. So overall, the result does not look too bad I guess.
 
-I hopy you enjoyed that journey into the thunar internals ... enough storytelling for now, I realy need to take care of these remaining regressions !
+I hope you enjoyed that journey into the thunar internals ... enough storytelling for now, I really need to take care of these remaining regressions !
 
 Many thanks to Reuben, AndreLDM, DarkTrick and others for early testing !
 And as well thanks to AndreLDM for permitting me to use the code of [his blog](https://andreldm.com){:target="_blank"} as a base for this very first blogpost of mine!

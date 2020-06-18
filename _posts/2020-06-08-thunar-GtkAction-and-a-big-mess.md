@@ -10,7 +10,7 @@ comments: true
 
 My journey into the [GtkAction](https://developer.gnome.org/gtk3/stable/GtkAction.html) abysses of [Thunar](https://gitlab.xfce.org/xfce/thunar) began in the mid of 2019. Be warned, it is no story of success. It is rather a story about permanent failure, about finding a way through a mace while walking into almost every dead end.
 
-Actually I just wanted to fix [#198 (Merge all file-context-menus into one)](https://gitlab.xfce.org/xfce/thunar/-/issues/198). But than things got weird. More than half a year later and after numerous interactive rebases I finally merged my branch into master \o/
+Actually I just wanted to fix [#198 (Merge all file-context-menus into one)](https://gitlab.xfce.org/xfce/thunar/-/issues/198). But somehow things got weird. More than half a year later and after numerous interactive rebases I finally merged my branch into master \o/
 
 ### Motivation
 

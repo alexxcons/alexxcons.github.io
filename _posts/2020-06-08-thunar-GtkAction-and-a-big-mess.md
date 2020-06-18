@@ -6,11 +6,13 @@ tags: intro
 comments: true
 ---
 
+### Overview
+
 My journey into the [GtkAction](https://developer.gnome.org/gtk3/stable/GtkAction.html) abysses of [Thunar](https://gitlab.xfce.org/xfce/thunar) began in the mid of 2019. Be warned, it is no story of success. It is rather a story about permanent failure, about finding a way through a mace while walking into almost every dead end.
 
 Actually I just wanted to fix [#198 (Merge all file-context-menus into one)](https://gitlab.xfce.org/xfce/thunar/-/issues/198). But than things got weird. More than half a year later and after numerous interactive rebases I finally merged my branch into master \o/
 
-.. but lets start at the beginning:
+### Motivation
 
 The old Thunar used to create the same menu items in different places using different code. In the past that led to inconsistencies. E.g. the location bar only provided a very minimal context menu, no [custom actions](https://docs.xfce.org/xfce/thunar/custom-actions) at all.
 
@@ -23,11 +25,14 @@ Looking at [thunar-location-buttons.c](https://gitlab.xfce.org/xfce/thunar/-/blo
 So yay, lets just copy+paste the missing stuff to the location buttons?
 Nah, that would be too easy. As a developer who values [DRY](https://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself), it would hurt my belief in clean code to produce more mess.
 
+### Let's Start Hacking
+
 I started to do some coding .. first I created a new widget [thunar-menu](https://gitlab.xfce.org/xfce/thunar/-/blob/master/thunar/thunar-menu.c) which internally is a [gtk-menu](https://developer.gnome.org/gtk3/stable/GtkMenu.html), and moved menu-item creation and the related actions for copy/cut/paste/delete/move_to_trash to there to have them at some central place, to be reused by different menus. I as well moved the action from thunar-launcher to thunar-menu (I guess the original intention of the launcher was, to actually launch thing, not to manage menu-items) And I replaced separate action classes in favour of methods inside thunar-menu.
 
 Meanwhile the location-button-menu and the context-menu, which I used for testing, were populated with some items again.
 
 The old code made massive use of the deprecated GtkAction and GtkActionEntry classes together with GtkUiManager. I did not want to add more G_GNUC_BEGIN_IGNORE_DEPRECATIONS, to silence warnings. So I decided to replace the deprecated calls.
+
 Looking into the gtk3 documentation revealed that there now is [GAction](https://developer.gnome.org/GAction/) and [GActionEntry](https://developer.gnome.org/gio/stable/GActionMap.html#GActionEntry) which provides some service around accelerator activation, and there is [GtkMenu](https://developer.gnome.org/gtk3/stable/GtkMenu.html)/[GMenu](https://developer.gnome.org/gio/stable/GMenu.html) for which at that time I had no clear idea why there are two of them.
 
 The doc. of GAction told me that it should not be used for anything related to labels, icons or creation of visual widgets .. damn. SO at that time I did not see an advantage in using this class. I decided to rather go for GtkMenu together with some custom replacement for GtkActionEntry: [XfceGtkActionEntry](https://gitlab.xfce.org/xfce/libxfce4ui/-/blob/master/libxfce4ui/xfce-gtk-extensions.h#L45).
@@ -44,11 +49,19 @@ There were bugs about menu-flickering and slowness while rubber banding/mass sel
 Things went well, I came to the point where I needed some items from thunar-window, like the zoom-section and the view-specific settings. As well most file-menu items in the thunar-window-menu did not work any more since I moved management of them from thunar-launcher to thunar-menu. So next step clearly was: Introduce XfceGtkActionEntry to the thunar-window menu .. and than shit hit the fan.
 So far the thunar-window-menu was always present and took care for any accelerator actions. Since my concept was "create menu on request", there was no menu-instance which could take care for accelerators any more, leading to dysfunctional accelerator keys, rendering my whole concept as faulty .. aargh.
 
+### Start all over again
+
 After some time of grieve and doubts I fixed the problem by moving most of the code from thunar-menu back to thunar-launcher, which lifetime is coupled to thunar-window.
+
 From now on thunar-menu was more or less just an convenience wrapper for thunar-launcher ... still useful, but sadly it lost its glory. Thunar-launcher now builds volatile menu items on request and permanently listens to the related accelerators. Finally accelerators started to work fine, and I was able to continue to fight with the window-menu.
+
 I had much more trouble with that menu, too much to tell it here .. however somehow I managed to get it functional, so that it mostly worked like before.
 
-Later on, while [reporting a bug against gtk](https://gitlab.gnome.org/GNOME/gtk/-/issues/2375) I learned that the class [gtk_accel_map](https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html), which I use as a central part will be deprecated soon .. the gtk devs so far just missed to set a deprecation makro. So it seems like I will need to touch the accelerator part again. This time I plan to make use of the [GActionMap](https://developer.gnome.org/gio/stable/GActionMap.html) interface .. going to be a story for another day.
+### An unpleasant discovery
+
+Later on, while [reporting a bug against gtk](https://gitlab.gnome.org/GNOME/gtk/-/issues/2375) I learned that the class [gtk_accel_map](https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html), which I use as a central part will be deprecated soon ... aargh again. The gtk devs so far just missed to set a deprecation makro. So it seems like I will need to touch the accelerator part again. This time I plan to make use of the [GActionMap](https://developer.gnome.org/gio/stable/GActionMap.html) interface .. going to be a story for another day.
+
+### Testing and open issues
 
 For first testing and code-review I luckily I got support of some early adopters. They found many more defects and regressions which kept me busy a long while. Though luckily nothing concept-breaking.
 
@@ -62,6 +75,8 @@ And there are related tasks on my agenda, for which I just did not find the time
 * use thunar-menu in bookmark view
 * use thunar-menu in Tree view
 * many minor things
+
+### Conclusion
 
 Finally I ended up with [25 commits and +4717 / -7149 line changes](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/10). The occurrence of G_GNUC_BEGIN_IGNORE_DEPRECATIONS got reduced from 250 to 35. As well the remaining 35 which will further drop when using GtkMenu for bookmark-view/tree-view. That should simplify the move to gtk4 in the future. So overall, the result does not look too bad I guess.
 

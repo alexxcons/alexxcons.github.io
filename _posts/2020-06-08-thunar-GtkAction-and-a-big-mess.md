@@ -78,7 +78,7 @@ And there are related tasks on my agenda, for which I just did not find the time
 
 ### Conclusion
 
-Finally I ended up with [25 commits and +4717 / -7149 line changes](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/10). The occurrence of `G_GNUC_BEGIN_IGNORE_DEPRECATIONS` got reduced from 250 to 35. The remaining 35 which will further drop when using GtkMenu for bookmark-view/tree-view. That should simplify the move to gtk4 in the future. The `location-button` context menu shows custom-actions now, and as well some other bugs got fixed with the changes.
+Finally I ended up with [25 commits and +4717 / -7149 line changes](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/10). The occurrence of `G_GNUC_BEGIN_IGNORE_DEPRECATIONS` got reduced from 250 to 35. The remaining 35 occurrences will further drop when using GtkMenu for bookmark-view/tree-view. That should simplify the move to gtk4 in the future. The `location-button` context menu shows custom-actions now, and as well some other bugs got fixed with the changes.
 
 So overall, the result does not look too bad I guess.
 

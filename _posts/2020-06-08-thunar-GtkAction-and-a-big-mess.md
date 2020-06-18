@@ -18,13 +18,14 @@ The old Thunar used to create the same menu items in different places using diff
 
 From time to time I found myself right-clicking on a location-button, just to find out that there still is no custom action. At some point of maximal annoyance I decided to fix that problem ... not sure if I would have done so when I knew how long that road would be.
 
-Looking at thunar-location-buttons.c revealed a lot of duplicated code. The thunar-standard-view and thunar-window both use the deprecated GtkActionEntry to define menu item labels and related actions. The location buttons just mirrored parts of that code.
+Looking at thunar-location-buttons.c revealed a lot of duplicated code. The thunar-standard-view and thunar-window both used the deprecated GtkActionEntry to define menu item labels and related actions. The location buttons just mirrored parts of that code. On top some other actions were defined in thunar-launcher or had their own classes, inheriting GtkAction.
 
 So yay, lets just copy+paste the missing stuff to the location buttons?
 Nah, that would be too easy. As a developer who values [DRY](https://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself), it would hurt my belief in clean code to produce more mess.
 
-I started to do some coding .. first I created a new widget "thunar-menu" which internally is a "gtk-menu", and moved menu-item creation and the related actions for copy/cut/paste/delete/move_to_trash to there to have them at some central place.
-Meanwhile the location-button menu and the context menu, which I both used for testing, started to look good to me (where "good" means: just like before)
+I started to do some coding .. first I created a new widget "thunar-menu" which internally is a "gtk-menu", and moved menu-item creation and the related actions for copy/cut/paste/delete/move_to_trash to there to have them at some central place, to be reused by different menus. I as well moved the action from thunar-launcher to thunar-menu (I guess the original intention of the launcher was, to actually launch thing, not to manage menu-items) And I replaced separate Actioning classes in favour of methods inside thunar-menu.
+
+Meanwhile the location-button-menu and the context-menu, which I used for testing, were populated with some items again.
 
 The old code made massive use of the deprecated GtkAction and GtkActionEntry classes together with GtkUiManager. I did not want to add more G_GNUC_BEGIN_IGNORE_DEPRECATIONS, to silence warnings. So I decided to replace the deprecated calls.
 Looking into the gtk3 documentation revealed that there is "GAction" and "GActionEntry" which provides some service around accelerator activation, and there is GtkMenu/GMenu for which at that time I had no clear idea why there are two of them.
@@ -40,14 +41,14 @@ So I started to build XfceGtkActionEntry and some support methods. XfceGtkAction
 Next problem: The menus in thunar so far did not get destroyed, but were updated whenever the selected items got changed, and got shown when needed. That sounded wrong to me. Why should I want to update menu-items while no menu is visible at all ?
 There were bugs about menu-flickering and slowness while rubber banding/mass select which seem to be related. Since I anyhow needed to touch that part, I decided to build menus only when they need to be shown.
 
-Things went well, I was about to introduce XfceGtkActionEntry to the thunar-window menu .. and than shit hit the fan.
-So far the window-menu was always present and took care for any accelerator actions. Since my concept was "create menu on request", there was no menu-instance which could take care for accelerators any more, leading to dysfunctional accelerator keys. :F
+Things went well, I came to the point where I needed some items from thunar-window, like the zoom-section and the view-specific settings. As well some other items from thunar-window did not work any more, since I moved file-menu functionality from thunar-launcher to thunar-menu. So next step clearly was: Introduce XfceGtkActionEntry to the thunar-window menu .. and than shit hit the fan.
+So far the window-menu was always present and took care for any accelerator actions. Since my concept was "create menu on request", there was no menu-instance which could take care for accelerators any more, leading to dysfunctional accelerator keys, rendering my whole concept as faulty .. aargh.
 
-After some time of grieve and self-hatred I fixed that problem by moving most of the code from thunar-menu to thunar-launcher, which lifetime is coupled to thunar-window. Thunar launcher was already the home of some actions from the file-menu before. I just abused it even more (I guess the original intention of the launcher was, to actually launch thing, not to manage menu-items)
-From now on thunar-menu is more or less just an convenience wrapper for thunar-launcher ... still useful, but sadly it lost its glory. However finally accelerators started to work, and I was able to continue to fight with the window-menu.
+After some time of grieve and doubts I fixed the problem by moving most of the code from thunar-menu back to thunar-launcher, which lifetime is coupled to thunar-window.
+From now on thunar-menu was more or less just an convenience wrapper for thunar-launcher ... still useful, but sadly it lost its glory. Thunar-launcher now builds volatile menu items on request and permanently listens to the related accelerators. Finally accelerators started to work, and I was able to continue to fight with the window-menu.
 I had much more trouble with that menu, too much to tell it here .. however somehow I managed to get it functional, so that it mostly worked like before.
 
-Later on I found out that gtk_accel_map, which I use a lot is going to be deprecated soon. So it seems like I anyhow will need to touch the accelerator part again. This time I plan to make use of the GActionMap interface .. going to be a story for another day.
+Later on I found out that the class gtk_accel_map, which I use a lot is going to be deprecated soon. So it seems like I will need to touch the accelerator part again. This time I plan to make use of the GActionMap interface .. going to be a story for another day.
 
 For first testing and code-review I luckily I got support of some early adopters. They found many more defects and regressions which kept me busy a long while. Though luckily nothing concept-breaking.
 
@@ -68,3 +69,4 @@ I hope you enjoyed that journey into the thunar internals ... enough storytellin
 
 Many thanks to Reuben, AndreLDM, DarkTrick and others for early testing !
 And as well thanks to AndreLDM for permitting me to use the code of [his blog](https://andreldm.com){:target="_blank"} as a base for this very first blogpost of mine!
+

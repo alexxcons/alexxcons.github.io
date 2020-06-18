@@ -52,7 +52,7 @@ Later on, while [reporting a bug against gtk](https://gitlab.gnome.org/GNOME/gtk
 
 For first testing and code-review I luckily I got support of some early adopters. They found many more defects and regressions which kept me busy a long while. Though luckily nothing concept-breaking.
 
-While writing this, there are still some regressions which I introduced, waiting to get fixed by me:
+While writing this, there are still some regressions which I introduced, waiting to get fixed by me, before a stable release:
 * [Regression: Window menu not updated when using ALT+mnemonic key](https://gitlab.xfce.org/xfce/thunar/-/issues/320)
 * [Regression: Window menu not shown when using ALT+mnemonic key directly after starting thunar](https://gitlab.xfce.org/xfce/thunar/-/issues/321)
 * [GObject-WARNING on closing thunar in some conditions](https://gitlab.xfce.org/xfce/thunar/-/issues/319)

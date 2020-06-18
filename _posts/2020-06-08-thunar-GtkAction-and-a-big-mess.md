@@ -16,7 +16,7 @@ Actually I just wanted to fix [#198 (Merge all file-context-menus into one)](htt
 
 The old Thunar used to create the same menu items in different places using different code. In the past that led to inconsistencies. E.g. the location bar only provided a very minimal context menu, no [custom actions](https://docs.xfce.org/xfce/thunar/custom-actions) at all.
 
-<add picture>
+![location button context menu](/assets/img/location_buttons_context_menu.png)
 
 From time to time I found myself right-clicking on a `location-button`, just to find out that there still is no `custom action`. At some point of maximal annoyance I decided to fix that problem ... not sure if I would have done so when I knew how long that road would be.
 

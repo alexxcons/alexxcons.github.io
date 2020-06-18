@@ -82,7 +82,9 @@ Finally I ended up with [25 commits and +4717 / -7149 line changes](https://gitl
 
 So overall, the result does not look too bad I guess.
 
-Well, this blogpost got by far too. I hope you nevertheless enjoyed the journey into the thunar internals ... enough storytelling for now, I really need to take care of these remaining regressions :) !
+Well, this blogpost grew by far too long. I hope you nevertheless enjoyed the journey into the thunar internals!
+
+... enough storytelling for now, I really need to take care of these remaining regressions! :)
 
 Many thanks to [Reuben](https://gitlab.xfce.org/reubengreen73), [AndreLDM](https://gitlab.xfce.org/andreldm), [DarkTrick](https://gitlab.xfce.org/DarkTrick) and others for early testing and bug reporting!
 And as well big thanks to AndreLDM for permitting me to use the code of [his blog](https://andreldm.com) as a base for this very first blogpost of mine!

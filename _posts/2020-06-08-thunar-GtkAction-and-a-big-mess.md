@@ -39,7 +39,7 @@ The [doc. of GAction](https://developer.gnome.org/GAction/) told me that it shou
 
 Retrospective ignoring `GAction` might not have been my smartest move. Meanwhile I understood how `GAction` can be used with `GtkMenu`, and I will most likely go for it at some later point.
 
-Regarding [GtkUiManager](https://developer.gnome.org/gtk3/stable/GtkUIManager.html): The definition of menu-items of thunar was scattered across [7 different *-ui.xml files](https://gitlab.xfce.org/xfce/thunar/-/commit/ed46f9c3baa3533629d8c1000511300fb0e6fdd5), making it hard to figure out what belongs together. Because of that I decided to just get rid of `GtkUiManager`, and create menu-items in the code instead of predefining their order in xml. IMO the usage of xml files to build GUI's might be nice for static GUI's, though IMO for dynamic menu-creation it just introduces unnecessary complexity.
+Regarding [GtkUiManager](https://developer.gnome.org/gtk3/stable/GtkUIManager.html): The definition of menu-items of Thunar was scattered across [7 different *-ui.xml files](https://gitlab.xfce.org/xfce/thunar/-/commit/ed46f9c3baa3533629d8c1000511300fb0e6fdd5), making it hard to figure out what belongs together. Because of that I decided to just get rid of `GtkUiManager`, and create menu-items in the code instead of predefining their order in xml. IMO the usage of xml files to build GUI's might be nice for static GUI's, though IMO for dynamic menu-creation it just introduces unnecessary complexity.
 
 So I started to build `XfceGtkActionEntry` and some support methods.`XfceGtkActionEntry` is a structure which holds labels, tooltips, icons, types, the accelerator paths and callbacks to the related actions. Like `GtkActionEntry` it is just a struct and can be filled in a static way.
 
@@ -82,7 +82,7 @@ Finally I ended up with [25 commits and +4717 / -7149 line changes](https://gitl
 
 So overall, the result does not look too bad I guess.
 
-Well, this blogpost grew by far too long. I hope you nevertheless enjoyed the journey into the thunar internals!
+Well, this blogpost grew by far too long. I hope you nevertheless enjoyed the journey into the Thunar internals!
 
 ... enough storytelling for now, I really need to take care of these remaining regressions! :)
 

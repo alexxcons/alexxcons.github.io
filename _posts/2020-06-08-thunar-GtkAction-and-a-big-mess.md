@@ -2,7 +2,7 @@
 layout: post
 title:  "thunar, GtkAction and a big mess"
 date:   2020-06-04 22:51:00
-tags: intro
+tags: xfce thunar
 comments: true
 ---
 
@@ -66,8 +66,7 @@ Later on, while [reporting a bug against gtk](https://gitlab.gnome.org/GNOME/gtk
 For first testing and code-review I luckily I got support of some early adopters. They found many more defects and regressions which kept me busy a long while. Luckily nothing concept-breaking was found.
 
 While writing this, there are still some regressions which I introduced, waiting to get fixed by me, before a stable release:
-* [Regression: Window menu not updated when using ALT+mnemonic key](https://gitlab.xfce.org/xfce/thunar/-/issues/320)
-* [Regression: Window menu not shown when using ALT+mnemonic key directly after starting thunar](https://gitlab.xfce.org/xfce/thunar/-/issues/321)
+* [Regression: Missing accelerators for bookmark items](https://gitlab.xfce.org/xfce/thunar/-/issues/331)
 * [GObject-WARNING on closing thunar in some conditions](https://gitlab.xfce.org/xfce/thunar/-/issues/319)
 
 And there are related tasks on my agenda, for which I just did not find the time so far:

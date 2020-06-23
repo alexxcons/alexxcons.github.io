@@ -27,7 +27,7 @@ Nah, that would be too easy. As a developer who values [DRY](https://en.wikipedi
 
 ### Let's Start Hacking
 
-I started to do some coding .. first I created a new widget [thunar-menu](https://gitlab.xfce.org/xfce/thunar/-/blob/master/thunar/thunar-menu.c) which internally is a [gtk-menu](https://developer.gnome.org/gtk3/stable/GtkMenu.html), and moved menu-item creation and the related actions for copy/cut/paste/delete/move_to_trash there to have them at some central place, so they can be reused by different menus. I as well moved the actions from `thunar-launcher` to `thunar-menu` (I guess the original intention of the launcher was, to actually launch thing, not to manage menu-items) and replaced separate action classes in favour of methods inside `thunar-menu`.
+I started to do some coding .. first I created a new widget [thunar-menu](https://gitlab.xfce.org/xfce/thunar/-/blob/master/thunar/thunar-menu.c) which internally is a [gtk-menu](https://developer.gnome.org/gtk3/stable/GtkMenu.html), and moved menu-item creation and the related actions for copy/cut/paste/delete/move_to_trash there to have them at some central place, so they can be reused by different menus. I as well moved the actions from `thunar-launcher` to `thunar-menu` (I guess the original intention of the launcher was, to actually launch things, not to manage menu-items) and replaced separate action classes in favour of methods inside `thunar-menu`.
 
 Meanwhile the location-button-menu and the context-menu, which I used for testing, were populated with some items again.
 
@@ -86,5 +86,4 @@ Well, this blogpost grew by far too long. I hope you nevertheless enjoyed the jo
 
 ... enough storytelling for now, I really need to take care of these remaining regressions! :)
 
-Many thanks to [Reuben](https://gitlab.xfce.org/reubengreen73), [AndreLDM](https://gitlab.xfce.org/andreldm), [DarkTrick](https://gitlab.xfce.org/DarkTrick) and others for early testing and bug reporting!
-And as well big thanks to AndreLDM for permitting me to use the code of [his blog](https://andreldm.com) as a base for this very first blogpost of mine!
+Thanks to [Reuben](https://gitlab.xfce.org/reubengreen73), [AndreLDM](https://gitlab.xfce.org/andreldm), [DarkTrick](https://gitlab.xfce.org/DarkTrick) and others for early testing and bug reporting! Special thanks to AndreLDM, motivating me to write this blogpost at all :D.

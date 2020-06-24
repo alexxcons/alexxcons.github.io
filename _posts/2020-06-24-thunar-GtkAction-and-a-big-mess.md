@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Thunar, GtkAction and a big mess"
-date:   2020-06-04 22:51:00
+date:   2020-06-24 22:38:00
 tags: Xfce Thunar
 comments: true
 ---

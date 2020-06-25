@@ -5,8 +5,8 @@ date:   2020-06-04 22:51:00
 tags: intro
 comments: true
 ---
-Actually I just want to test if stuff works at all :)
+Actually I just want to test if stuff works at all .. seems to be fine :)
 
-Many thanks to AndreLDM for permitting me to use the code of [his blog](https://andreldm.com){:target="_blank"} as a base!
+Many thanks to AndreLDM for poitning me to the sources of [his blog](https://andreldm.com){:target="_blank"} and settings things up!
 
 

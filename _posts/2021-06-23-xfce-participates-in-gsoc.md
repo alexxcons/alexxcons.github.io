@@ -17,7 +17,7 @@ Now there are 3 very motivated GSoC students supporting Xfce. Allow me to introd
 
 **Yongha Hwang**, who applied for various thunar issues, mostly related to file transmission.
 
-**Sergios Anestis Kefalidis**, who as well works on thunar, targeting a width pallet of thunar features.
+**Sergios Anestis Kefalidis**, who as well works on thunar, targeting a wide range of features.
 
 **Vishal Sharma**, who is looking into sample/skeleton panel plugins in different GOI supported languages.
 

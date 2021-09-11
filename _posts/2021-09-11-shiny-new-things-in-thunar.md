@@ -21,17 +21,17 @@ As well here some more unmentioned new features added during during GSoC, for wh
 
 Bookmarks got moved into a separate 'Bookmarks Menu' and a 'create bookmark' option was added ([MR !109](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/109) and [MR !71](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/71))
 
-![bookmark menu](../assets/img/bookmark_menu.png)
+![bookmark menu](/assets/img/bookmark_menu.png)
 
 Better discover discoverability for setting default applications:
 
 A new menu item "Set Default Application" was added to the "Open with" submenu ([MR !79](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/79))
 
-![Open with - Set Default App](../assets/img/default_app_1.png)
+![Open with - Set Default App](/assets/img/default_app_1.png)
 
 A new section 'Default Application' was added to the 'thunar-chooser-dialog' ([MR !81]((https://gitlab.xfce.org/xfce/thunar/-/merge_requests/81)))  
 
-![Default App Section](../assets/img/default_app_2.png)
+![Default App Section](/assets/img/default_app_2.png)
 
 On top there are still [various open merge requests](https://gitlab.xfce.org/xfce/thunar/-/merge_requests) with partial finished features, most of them from GSoC students for which I did not find time so far.
 So expect more new stuff to arrive soon !

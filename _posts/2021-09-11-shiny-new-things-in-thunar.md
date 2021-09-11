@@ -17,7 +17,7 @@ For details about the new features check the summaries provided by Sergios and Y
 
 [Yongha's GSoC Summary](https://dev.ikx.kr/GSOC-6th/)
 
-As well here some more unmentioned new features added during during GSoC, for which I thought they would be worth to mention:
+As well here some more new features added during GSoC for which I thought they would be worth to mention:
 
 Bookmarks got moved into a separate 'Bookmarks Menu' and a 'create bookmark' option was added ([MR !109](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/109) and [MR !71](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/71))
 

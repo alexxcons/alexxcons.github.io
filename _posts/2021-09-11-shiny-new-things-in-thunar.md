@@ -28,7 +28,7 @@ As well here some more new features added during GSoC for which I thought they w
 
 ![Open with - Set Default App](/assets/img/default_app_1.png)
 
-* A new section 'Default Application' was added to the 'thunar-chooser-dialog' ([MR !81]((https://gitlab.xfce.org/xfce/thunar/-/merge_requests/81)))  
+* A new section 'Default Application' was added to the 'thunar-chooser-dialog' ([MR !81](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/81))  
 
 ![Default App Section](/assets/img/default_app_2.png)
 

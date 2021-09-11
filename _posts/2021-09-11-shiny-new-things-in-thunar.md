@@ -37,6 +37,6 @@ So expect more new stuff to arrive soon !
 
 You as well might want to keep an eye on [xfce4-terminal](https://gitlab.xfce.org/apps/xfce4-terminal), which received alot of activity recently, since it is now maintained by Sergios Kefalidis.
 
-If you find a bug on any of these new features, please make use of the xfce bugtracker.
+If you find a bug on any of these new features, please make use of the [xfce bugtracker](https://gitlab.xfce.org/xfce/thunar).
 
 Happy testing ! 

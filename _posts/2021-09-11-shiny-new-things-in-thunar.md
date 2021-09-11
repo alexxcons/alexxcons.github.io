@@ -8,7 +8,7 @@ comments: true
 
 [GSoC 2021](https://summerofcode.withgoogle.com) is over now and I am happy to tell you that both students working on thunar did an excellent job. Alot of nice stuff has been added thanks to them !
 
-In order to allow you to discover all these new features [Thunar 4.17.5](https://mail.xfce.org/pipermail/xfce-announce/2021-September/001059.html) was just released.
+In order to allow you to discover all these new features, [Thunar 4.17.5](https://mail.xfce.org/pipermail/xfce-announce/2021-September/001059.html) was just released.
 (Note that this is a development release. It still might have some rough edges)
 
 For details about the new features check the summaries provided by Sergios and Yongha:
@@ -17,7 +17,7 @@ For details about the new features check the summaries provided by Sergios and Y
 
 [Yongha's GSoC Summary](https://dev.ikx.kr/GSOC-6th/)
 
-As well here some more new features added during GSoC for which I thought they would be worth to mention:
+Besides these, here as well some more new features added during GSoC for which I thought they would be worth to mention:
 
 * Bookmarks got moved into a separate 'Bookmarks Menu' and a 'create bookmark' option was added
 ([MR !109](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/109) and [MR !71](https://gitlab.xfce.org/xfce/thunar/-/merge_requests/71))

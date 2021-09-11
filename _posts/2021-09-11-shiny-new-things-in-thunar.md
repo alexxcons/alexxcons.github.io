@@ -8,7 +8,7 @@ comments: true
 
 [GSoC 2021](https://summerofcode.withgoogle.com) is over now and I am happy to tell you that both students working on thunar did an excellent job. Alot of nice stuff has been added thanks to them !
 
-In order to allow you to discover all these new features [Thunar 4.17.5](https://gitlab.xfce.org/xfce/thunar/-/tags/thunar-4.17.5) was just released.
+In order to allow you to discover all these new features [Thunar 4.17.5](https://mail.xfce.org/pipermail/xfce-announce/2021-September/001059.html) was just released.
 (Note that this is a development release. It still might have some rough edges)
 
 For details about the new features check the summaries provided by Sergios and Yongha:

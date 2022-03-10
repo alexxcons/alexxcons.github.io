@@ -1,24 +1,36 @@
----
-layout: default
----
-<div class="home">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="canonical" href="https://alexxcons.github.io/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="keywords" content="Xfce thunar GSoC alexxcons" />
+    <title>Alexxcon's Software Development Blog</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-    <li>
-      <article>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.tags %} • {{ post.tags|join: ', ' }}{% endif %}</p>
-
-        <p>
-          {{ post.excerpt }}
-        <p>
-        <p><a href="{{ post.url }}">Read more »</a></p>
-      </article>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
-
+<body>
+    <div id="wrapper">
+        <div id="body" class="clear">
+            <div id="sidebar" class="column-left">
+                <ul>
+                    <li>
+                        <ul class="blocklist">
+                            <li class="selected-item"><a href="index.html">Test1</a></li>
+                            <li><a href="test2.html">Test2</a></li>
+                        </ul>
+                    </li>   
+                </ul>
+            </div>
+            <div id="content" class="column-right">
+            <p>&nbsp;</p>
+                <h2>Test123!</h2>
+            </div>
+        </div>
+        <div id="footer" class="clear">
+            <p class="left">&copy; 2022 Alexander Schwinn</p>
+            <p class="right"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+        </div>
+    </div>
+</body>
+</html>

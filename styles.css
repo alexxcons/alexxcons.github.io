@@ -1,0 +1,194 @@
+/** global **/
+body {
+    margin:0px auto;
+    padding:0;
+    font-family: Verdana, Calibri, Arial, Sans-Serif;
+    font-weight:normal;
+    font-size:large;
+    color:#525252;
+    background:#fff url('images/header-bg.jpg') repeat-x;
+}
+* {
+    margin:0;
+    padding:0;
+}
+
+
+/** element defaults **/
+table {
+    width:100%;
+    text-align:left;
+}
+th, td {
+    padding:5px 10px;
+}
+th {
+    color:#fff;
+    background-color:#630303;
+}
+td {
+    border-bottom:1px solid #f4f4f4;
+}
+code, blockquote {
+    display:block;
+    border-left:5px solid #ddd;
+    padding:10px;
+    margin-bottom:20px;
+}
+blockquote p {
+    font-style:italic;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    margin:0;
+    height: 1%;
+}
+p {
+    line-height:1.9em;
+    margin-bottom:15px;
+    line-height: 18px;
+}
+
+
+b {
+  font-weight: 900;
+  color:#1a1a1a;
+}
+
+
+h1 {
+    font-size:45px;
+    color:#630303;
+}
+h2 {
+    font-size:30px;
+    font-weight:bold;
+
+    padding:0 0 5px;
+    margin:0;
+}
+h3 {
+    font-size:large;
+    padding-bottom:10px;
+}
+h4 {
+    padding-bottom:10px;
+    font-weight:bold;
+    font-size:medium;
+}
+
+/** small **/
+h5 {
+    font-size:11px;
+    font-weight:normal;
+
+}
+
+ul, ol {
+    margin:0 0 35px 35px;
+}
+li {
+    padding-bottom:5px;
+}
+
+/** For consistency make scrollbar on each page visible **/
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
+div#wrapper {
+    width:1020px;
+    margin:0px auto;
+    padding:0;
+}
+
+
+div#header {
+    margin: auto;
+    padding : auto;
+    width:900px;
+    height:201px;
+    position:absolute;
+    top:13px;
+}
+div#header h1{
+    white-space: nowrap;
+    color:#ffffff;
+    font-size:48px;
+    font-weight:normal;
+    margin-left:10px;
+    margin-top:20px;
+}
+
+div#header a {
+    color:#ffffff;
+    text-decoration:none;
+}
+
+div.card a {
+    color:#0D3C84;
+}
+
+div#body a {
+    color:#0D3C84;
+}
+
+div#body {
+    position: relative;
+    top:130px;
+}
+
+div#body h2{
+    margin-left:20px;
+}
+
+.full-img {
+    height: 100%    ;
+    margin-bottom:10px;
+}
+
+div#footer {
+    padding:20px 20px;
+    color:#fff;
+    border-top:5px solid #ccc;
+    position: relative;
+    top:130px;
+    z-index: -1;
+}
+div#footer p {
+    color:#666;
+    margin:0;
+    font-size:11px;
+    width:50%;
+}
+div#footer p.left { float:left; }
+div#footer p.right { float:right; text-align:right; }
+div#footer p a {
+    color:#666;
+    font-weight:bold;
+    text-decoration:none;
+
+}
+
+/*************************************** used for mail address in impressum ***************************************/
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}
+
+/*************************************** clear fix ***************************************/
+.clear:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clear {
+    display: inline-block;
+}
+.clear {
+    display: block;
+}
+
+}

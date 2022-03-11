@@ -1,6 +1,5 @@
 /** global **/
 body {
-    margin:0px auto;
     padding:0;
     font-family: Verdana, Calibri, Arial, Sans-Serif;
     font-weight:normal;
@@ -47,12 +46,10 @@ p {
     line-height: 18px;
 }
 
-
 b {
   font-weight: 900;
   color:#1a1a1a;
 }
-
 
 h1 {
     font-size:45px;
@@ -104,11 +101,8 @@ div#wrapper {
 
 div#header {
     margin: auto;
-    padding : auto;
-    width:900px;
-    height:201px;
-    position:absolute;
-    top:13px;
+    padding: auto;  
+    margin-top:25px; 
 }
 div#header h1{
     white-space: nowrap;
@@ -133,8 +127,7 @@ div#body a {
 }
 
 div#body {
-    position: relative;
-    top:130px;
+    margin-top:50px;
 }
 
 div#body h2{
@@ -148,11 +141,9 @@ div#body h2{
 
 div#footer {
     padding:20px 20px;
+    margin-top:20px;
     color:#fff;
     border-top:5px solid #ccc;
-    position: relative;
-    top:130px;
-    z-index: -1;
 }
 div#footer p {
     color:#666;

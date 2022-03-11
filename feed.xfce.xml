@@ -1,21 +1,143 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <link rel="canonical" href="https://alexxcons.github.io/" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="keywords" content="Xfce thunar GSoC alexxcons" />
-    <title>Alexxcon's Software Development Blog</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-</head>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+	<title>Alexxcon's Software Development Blog</title>
+	<link>https://alexxcons.github.io/</link>
+	<atom:link href="https://alexxcons.github.io/feed.xfce.xml" />
+	<pubDate>Fri, 11 Mar 2022 07:00:00 GMT</pubDate>
+	<lastBuildDate>Fri, 11 Mar 2022 07:00:00 GMT</lastBuildDate>
+	<item>
+	    <title>Xfce accepted to Google Summer of Code 2022</title>
+	    <author>Alexander Schwinn</author>
+	    <link>https://alexxcons.github.io/blogpost_4.html</link>
+	    <guid>https://alexxcons.github.io/blogpost_4.html</guid>
+	    <pubDate>Fri, 11 Mar 2022 07:00:00 GMT</pubDate>
+	    <description><![CDATA[
+	    <div id="body" class="clear">
+            <h2>Xfce accepted to Google Summer of Code 2022</h2>
+            <p></p>
+            <p>Good news, Xfce has been accepted to <a href="https://summerofcode.withgoogle.com/programs/2022/organizations/xfce">Google Summer of Code 2022</a> !</p>
 
-<body>
-    <div id="wrapper">
-        <div id="header">
-            <h1><a href="index.html">Alexxcon's Software Development Blog</a></h1>
+            <p>This time not only different thunar projects will be mentored, but as well some xfce4-terminal, xfce4-screenshooter and xfce4-panel projects. Check our  <a href="https://wiki.xfce.org/projects/gsoc/start">Xfce GSoC Wiki</a> for a detailed list of project ideas !</p>
+
+            <p>If you are not much involved into Xfce yet and interested in software development, now might be a good opportunity to contribute to Xfce while even getting payed for it !</p>
+
+            <p>In case you are already involved in Xfce development, you might be interested to mentor a GSoC contributor and add some project idea to the <a href="https://wiki.xfce.org/projects/gsoc/start#project_ideas">ideas-list</a> for which you can do mentoring.</p>
+
+            <p>For more detailed information, best check the guides on the <a href="https://summerofcode.withgoogle.com">official GSoC page</a>.</p>
+
+            <p>Hope to see you there !</p>
         </div>
-        <div id="body" class="clear">
-            <h4>Jun 24,2020</h4>
+        ]]></description>
+	</item>
+	<item>
+	    <title>Shiny new things in Thunar thanks to GSoC 2021</title>
+	    <author>Alexander Schwinn</author>
+	    <link>https://alexxcons.github.io/blogpost_3.html</link>
+	    <guid>https://alexxcons.github.io/blogpost_3.html</guid>
+	    <pubDate>Sat, 11 Sep 2021 15:00:00 GMT</pubDate>
+	    <description><![CDATA[
+	    <div id="body" class="clear">
+            <h2>Shiny new things in Thunar thanks to GSoC 2021</h2>
+            <p></p>
+            <p><a href="https://summerofcode.withgoogle.com">GSoC 2021</a> is over now and I am happy to tell you that both students working on thunar did an excellent job. Alot of nice stuff has been added thanks to them !</p>
+            
+            <p>In order to allow you to discover all these new features, <a href="https://mail.xfce.org/pipermail/xfce-announce/2021-September/001059.html">Thunar 4.17.5</a> was just released.
+            (Note that this is a development release. It still might have some rough edges)</p>
+            
+            <p>For details about the new features check the summaries provided by Sergios and Yongha:</p>
+            
+            <ul>
+                <li><a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog05.html">Sergios GSoC Summary</a></li>
+                <li><a href="https://dev.ikx.kr/GSOC-6th/">Yongha's GSoC Summary</a></li>
+            </ul>
+            <p>Besides these, here as well some more new features added during GSoC for which I thought they would be worth to mention:</p>
+            <p></p>
+            
+            <p>Bookmarks got moved into a separate 'Bookmarks Menu' and a 'create bookmark' option was added
+            (<a href="https://gitlab.xfce.org/xfce/thunar/-/merge_requests/109">MR !109</a> and <a href="https://gitlab.xfce.org/xfce/thunar/-/merge_requests/71">MR !71</a>)</p>
+            
+            <img class="full-img" src="images/blogpost_3/bookmark_menu.png" alt="bookmark menu"/>
+            <p></p>
+            <p>A new menu item "Set Default Application" was added to the "Open with" submenu (<a href="https://gitlab.xfce.org/xfce/thunar/-/merge_requests/79">MR !79</a>)</p>
+            
+            <img class="full-img" src="images/blogpost_3/default_app_1.png" alt="Open with - Set Default App"/>
+            <p></p>
+            <p>A new section 'Default Application' was added to the 'thunar-chooser-dialog' (<a href="https://gitlab.xfce.org/xfce/thunar/-/merge_requests/81">MR !81</a>)</p> 
+            
+            <img class="full-img" src="images/blogpost_3/default_app_2.png" alt="Default App Section"/>
+            
+            <p>On top there are still <a href="https://gitlab.xfce.org/xfce/thunar/-/merge_requests">various open merge requests</a> with partial finished features, most of them from GSoC students for which I did not find time so far.
+            So expect more new stuff to arrive soon !</p>
+            
+            <p>You as well might want to keep an eye on <a href="https://gitlab.xfce.org/apps/xfce4-terminal">xfce4-terminal</a>, which received alot of activity recently, since it is now maintained by Sergios Kefalidis.</p>
+            
+            <p>If you find a bug on any of these new features, please make use of the <a href="https://gitlab.xfce.org/xfce/thunar">xfce bugtracker</a>.</p>
+            
+            <p>Happy testing !</p>
+        </div>
+        ]]></description>
+	</item>
+	<item>
+	    <title>Xfce participation in GSoC 2021</title>
+	    <author>Alexander Schwinn</author>
+	    <link>https://alexxcons.github.io/blogpost_2.html</link>
+	    <guid>https://alexxcons.github.io/blogpost_2.html</guid>
+	    <pubDate>Wed, 23 Jun 2021 15:00:00 GMT</pubDate>
+	    <description><![CDATA[
+	        <div id="body" class="clear">
+            <h2>Xfce participation in GSoC 2021</h2>
+            <p></p>
+            <p>I am a bit late with my blog post .. though I suppose better late than never :D</p>
+            
+            <p>This year Xfce applied to the <a href="https://summerofcode.withgoogle.com/organizations/6058796058673152/">Google Summer of Code</a> program and I am happy to tell you that we accomplished to get 3 slots ! (That's very good, since new organization usually only receive one or two slots)</p>
+            
+            <p>There was a lot of interest by students. In total 15 proposals were received for Xfce.
+            So sadly we had to refuse several nice proposals. However the number of mentors as well was limited, so that this year Xfce anyhow would not be able to mentor more students.</p>
+            
+            <p>Now there are 3 very motivated GSoC students supporting Xfce. Allow me to introduce:</p>
+            
+            <ul>
+                <li><b>Yongha Hwang</b>, who applied for various thunar issues, mostly related to file transmission.</li>
+                <li><b>Sergios Anestis Kefalidis</b>, who as well works on thunar, targeting a wide range of features.</li>
+                <li><b>Vishal Sharma</b>, who is looking into sample/skeleton panel plugins in different GOI supported languages.</li>
+            </ul>
+            <p>Since I maintain thunar, I am the main mentor of Sergios and Yongha.</p>
+            
+            <p>These two and as well some other thunar focused GSoC applicants kept me very busy by adding many contributions long before the official coding part started :)
+            Already now I think mentoring for GSoC was a good thing to do. The gain by far outweighs the burden. I don't have much time left to work on issues myself, though the students overcompensate that by magnitudes.</p>
+            
+            
+            <p>Here a small taste of the recent activity related to GSoC:</p>
+            <ul>
+            <li><a href="https://gitlab.xfce.org/xfce/thunar/-/issues?scope=all&utf8=%E2%9C%93&state=closed&label_name[]=8.%20GSoC%202021">Thunar issues fixed by GSoC students</a></li>
+            <li><a href="https://gitlab.xfce.org/xfce/thunar/-/merge_requests">Currently 12 open thunar merge requests, 9 opened by GSoC students</a></li>
+            </ul>
+            
+            <p>... and that is only thunar. There is as well a lot of activity on exo and libxfce4-util !</p>
+            
+            <p>Many various smaller tweaks already made it into <a href="https://gitlab.xfce.org/xfce/thunar/-/tags/thunar-4.17.2">thunar 4.17.2</a>. Some bigger ones, e.g. issues from the [project ideas list](https://wiki.xfce.org/projects/gsoc/start#project_ideas)  are currently in work, or even already landed in the current master.</p>
+            
+            <p>If you want to take a peek on the upcoming changes and new features already now, you can check the students frequent blog posts:</p>
+            
+            <ul>
+            <li><a href="https://dev.ikx.kr">Yongha Hwang</a></li>
+            <li><a href="http://users.uoa.gr/~sdi1800073/">Sergios Anestis Kefalidis</a></li>
+            <li><a href="https://freshlybuilt.com/members/vishalsharma/">Vishal Sharma</a></li>
+            </ul>
+            
+            <p>Hope you will enjoy the upcoming changes!</p>
+        </div>
+	    ]]></description>
+	</item>
+	<item>
+	    <title>Thunar, GtkAction and a big mess</title>
+	    <author>Alexander Schwinn</author>
+	    <link>https://alexxcons.github.io/blogpost_1.html</link>
+	    <guid>https://alexxcons.github.io/blogpost_1.html</guid>
+	    <pubDate>Wed, 24 Jun 2020 15:00:00 GMT</pubDate>
+	    <description><![CDATA[
+	        <div id="body" class="clear">
             <h2>Thunar, GtkAction and a big mess</h2>
             <p></p>
 
@@ -105,13 +227,7 @@
             <p>Thanks to <a href="https://gitlab.xfce.org/reubengreen73">Reuben</a>, <a href="https://gitlab.xfce.org/andreldm">AndreLDM</a>, <a href="https://gitlab.xfce.org/DarkTrick">DarkTrick</a> and others for early testing and bug reporting! Special thanks to AndreLDM, motivating me to write this blogpost at all :D.</p>
 
         </div>
-        <div id="footer" class="clear">
-            <p class="right"><a href="https://github.com/alexxcons/alexxcons.github.io">page sources</a> | &copy; 2022 Alexander Schwinn</p>
-            <p class="left">
-                <a href="feed.xml"><img alt="rss" src="icons/rss.png" width="24" height="24"/></a>
-                <a href="https://gitlab.xfce.org/alexxcons"><img alt="gitlab" src="icons/gitlab.png" width="24" height="24"/></a>
-            </p>
-        </div>
-    </div>
-</body>
-</html>
+	    ]]></description>
+	</item>
+</channel>
+</rss>

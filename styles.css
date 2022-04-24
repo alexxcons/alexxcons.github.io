@@ -131,12 +131,13 @@ div#body {
 }
 
 div#body h2{
-    margin-left:20px;
+
 }
 
 .full-img {
     height: 100%    ;
     margin-bottom:10px;
+    margin-left:30px;
 }
 
 .full-page-img {

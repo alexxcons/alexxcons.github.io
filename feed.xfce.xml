@@ -5,7 +5,36 @@
 	<link>https://alexxcons.github.io/</link>
 	<atom:link href="https://alexxcons.github.io/feed.xfce.xml" />
 	<pubDate>Fri, 11 Mar 2022 07:00:00 GMT</pubDate>
-	<lastBuildDate>Fri, 11 Mar 2022 07:00:00 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 20 Oct 2022 23:00:00 GMT</lastBuildDate>
+        <item>
+            <title>Wallpaper Contest for Xfce 4.18</title>
+            <author>Alexander Schwinn</author>
+            <link>https://alexxcons.github.io/blogpost_5.html</link>
+            <guid>https://alexxcons.github.io/blogpost_5.html</guid>
+            <pubDate>Thu, 20 Oct 2022 23:00:00 GMT</pubDate>
+            <description><![CDATA[
+            <div id="body" class="clear">
+            <h4>Oct 20,2022</h4>
+            <h2>Wallpaper Contest for Xfce 4.18</h2>
+
+            <p>Probably you already heared that <a href="https://wiki.xfce.org/releng/4.18/roadmap">Xfce 4.18 is planned to be released</a> on 15th Dec. this year.</p>
+
+            <p>It would be nice to have a new default wallpaper for that release. This time the idea is to ask the Xfce community to contribute a couple of wallpapers. With a community vote the default Xfce 4.18 wallpaper than can be selected.</p>
+            
+            <p> So if you have the required skills, your contribution would be very welcome !</p>
+
+            <p>Like the <a href="https://gitlab.xfce.org/artwork/public/-/tree/master/wallpapers">old Xfce wallpapers</a>, the new wallpaper should be a vector graphic with an unmodified <a href="(https://gitlab.xfce.org/artwork/public/-/tree/master/logo)">Xfce mouse</a> on it and some fancy shapes.</p>
+
+            <p>Note that the image must be all yours and needs to be licenced under <a href="https://creativecommons.org/licenses/by-sa/4.0/)">CC BY-SA 4.0</a>. If you do not specify a licence in your post then we will assume that you are are licensing the image under the CC BY-SA 4.0.</p>
+
+            <p>The image should not mention the software (FOSS or proprietary) used to create the wallpaper in the metainfo.</p>
+
+            <p>Deadline for submissions is the 20th of November.</p>
+
+            <p>In order to participate, post your wallpaper into the <a href="https://gitlab.xfce.org/artwork/public/-/issues/1">corresponding gitlab issue</a> !</p>
+        </div>
+        ]]></description>
+        </item>
 	<item>
 	    <title>Xfce accepted to Google Summer of Code 2022</title>
 	    <author>Alexander Schwinn</author>

@@ -4,8 +4,33 @@
 	<title>Alexxcon's Software Development Blog</title>
 	<link>https://alexxcons.github.io/</link>
 	<atom:link href="https://alexxcons.github.io/feed.xfce.xml" />
-	<pubDate>Fri, 11 Mar 2022 07:00:00 GMT</pubDate>
-	<lastBuildDate>Thu, 20 Oct 2022 23:00:00 GMT</lastBuildDate>
+	<pubDate>Sun, 20 Nov 2022 23:00:00 GMT</pubDate>
+	<lastBuildDate>Sun, 20 Nov 2022 23:00:00 GMT</lastBuildDate>
+	<item>
+            <title>Wallpaper Contest for Xfce 4.18 - End of submissions</title>
+            <author>Alexander Schwinn</author>
+            <link>https://alexxcons.github.io/blogpost_5.html</link>
+            <guid>https://alexxcons.github.io/blogpost_5.html</guid>
+            <pubDate>Sun, 20 Nov 2022 23:00:00 GMT</pubDate>
+            <description><![CDATA[
+            <div id="body" class="clear">
+            <h4>Nov 20,2022</h4>
+            <h2>Wallpaper Contest for Xfce 4.18 - End of submissions</h2>
+
+            <p>The submission deadline for the <a href="https://gitlab.xfce.org/artwork/public/-/issues/1">Xfce 4.18 wallpaper contest</a> just ended, and I am happy to see that many submissions!</p>
+
+            <p>Starting by now, one week of voting will show which wallpapers are the most popular ones.</p>
+
+            <p>In order to cast your vote, login at <a href="https://gitlab.xfce.org/artwork/public/-/issues/1">gitlab.xfce.org</a> and add a &#10084;&#65039; or &#128077; reaction to all wallpapers you want to upvote.</p>
+ 
+            <p>Please keep in mind that you should vote for the best wallpaper, not for the best picture. E.g. it makes sense to leave some free space where desktop items can be placed.</p> 
+
+            <p>Voting will be closed on 27. November. Like that, the new wallpaper can be utilized for the Xfce4.18 pre2 announce, which is planned for beginning of December.</p>
+ 
+            <p>Happy voting !</p>
+            </div>
+        ]]></description>
+        </item>
         <item>
             <title>Wallpaper Contest for Xfce 4.18</title>
             <author>Alexander Schwinn</author>

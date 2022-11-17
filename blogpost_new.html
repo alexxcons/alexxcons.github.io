@@ -18,72 +18,44 @@
             <h4>Dec 01,2022</h4>
             <h2>Xfce 4.18 Pre2 - An outlook to new features compared to Xfce 4.16 </h2>
 
-            <p>Xfce 4.16.0 got released more than a year ago. Meanwhile alot of major development happened for Xfce. Our development team added a lot of nice new features and did a gazillion of bugfixes. Finally all that is goint to be released for your pleasure.</p>
+            <p>Xfce 4.16.0 got released almost two years ago. Meanwhile alot of major development happened for Xfce. Our development team added a lot of nice new features and did a gazillion of bugfixes. Finally all that is going to be released for your pleasure.</p>
             <p>Today is the day of the 'Xfce4.17 pre2' release, which gives early adopters the posibillity to check for compatibility and test before the final release. The final Xfce4.18 release is planned for 15. December. More details can be found on <a href="">our roadmap</a></p>
 
-            <p>So assuming you have installed Xfce 4.16, here an overview on the new features you will see on an upgrade to Xfce 4.18. For the sake of readibility, this list only shows new features which might be interesting for end-users. Check the component specific changelog for a complete, detailed list of bugfixes, internal changes, translation updates etc.</p>
+            <p>So assuming you have installed Xfce 4.16, here an overview on the new features you will see on an upgrade to Xfce 4.18. For the sake of readibility, this list only shows main highlights. Check the component specific changelog for a complete, detailed list of bugfixes, internal changes, translation updates etc.</p>
 
-<!-- <h2>libxfce4util</h2> -->
+<!-- <h2>libxfce4util</h2> Nothing of interest -->
 
-- xfce-gio-extensions - management of gvfs trusted attribute ---> Ok, lets better talk about that in thunar
-
-<h2>libxfce4ui (Widget Library)</h2>
-
-    Make glibtop an optional dependency
-    
-    about: Revamp About Xfce tab
-
-    - Some words on GtkHeaderBar / CSD
-    
-    - Use headerbars for dialogs if Gtk/DialogsUseHeader is enabled (#14)
-    
-    -- Optional support for CSD in few dialogs, default is SSD
-    -- Can be controlled by setting
-    
-    Add default shortcuts for tiling (Fixes #4)
-    
-    Add a widget for filename input (Bug #16542)
-    Switch Ctrl+Alt+Del to xfce4-session-logout (Bug #11979)
-
-- Introduce a shortcuts editor widget (XfceShortcutsEditor)
-
+<h2>libxfce4ui</h2>
+<ul>
+  <li>The 'About Xfce' Dialog was revamped</li>
+  <li>A default shortcut for window tiling was added.</li>
+  <li>A confortable widget for filename input was added. TODO SCREENSHOTS</li>
+  <li>Introduce a shortcuts editor widget (XfceShortcutsEditor)</li>
+</ul>
 <!-- <h2>garcon (Menu Library)</h2> Nothing of interest -->
 
 <h2>tumbler</h2>
-
-- Performance Improvement:
-  - pixbuf-thumbnailer: Stop animated image loading at first frame (#48)
-  - pixbuf-thumbnailer: Increase loader buffer size (!19)
-  - scheduler: Enable multi-threading (#1)
-  
-  Features:
-  - Add support for thumbnail size x-large and xx-large (#51)
-  - desktop-thumbnailer: Allow to override configuration in desktop files (#52)
-  - desktop-thumbnailer: Allow for thumbnailer override (#53)
-  - Try all available thumbnailers before declaring failure (#50)
-  - Support shared thumbnail repositories of the freedesktop.org thumbnail spec
+<ul>
+  <li>Performance improvements for the pixbuf-thumbnailer and the scheduler</li>
+  <li>Support for thumbnail size x-large and xx-large TODO SCREENSHOTS</li>
+  <li>Multiple overwrite options for the desktop-thumbnailer</li>
+  <li>Support for shared thumbnail repositories of the freedesktop.org thumbnail specification.
+      This feature can be used to predefine a folder full of thumbnails for e.g. network shares. Like that the thumbnails dont need to be generated for each user separately. LINK TO ISSUE
+  </li>
+</ul>
 
 <h2>xfce4-panel</h2>
-
-  - clock: Improved time zone matching (!105)
-
-  - clock: [GSoC22] Merge DateTime with Clock plugin (!101)
-
-  - clock: Reveal calendar command in prefs dialog (Fixes #560)
-
-  - clock: binary: Add new binary time mode (#235, !94)
-
-  - clock: Implement sleep monitor (#58, !88)
-
-  - Allow to set a custom icon in appmenu and dirmenu (#254, !83)
+<ul>
+  <li>Merge of DateTime and Clock plugin. SCREENSHOT (!101)</li>
+  <li>New binary time mode and a sleep monitor in the clock plugin SCREENSHOT</li>
+</ul>
 
 <!-- <h2>xfce4-dev-tools</h2> Nothing of interest -->
 
 <h2>xfce4-appfinder</h2>
-
-- Add option to hide window decorations (#51)
-- Include keywords and generic name to search
-
+<ul>
+  <li>Include keywords and generic names to search</li>
+</ul>
 <!-- <h2>xfconf</h2>  Nothing of interest -->
 
 <!-- <h2>xfce4-session</h2> Nothing of interest -->
@@ -92,105 +64,92 @@
 
 <!-- <h2>thunar-volman</h2> Nothing of interest -->
 <h2>xfdesktop</h2>
-
-- Properly handle UI scaling
-- Allow ejecting unmounted volumes
-- Implement better keyboard typeahead navigation
-- Call file manager launch API asynchronously
-- Support for menu item "set default application"
-- Add option to disable "Delete" menu entry in context menu (!22)
-- Ask for confirmation before desktop icons are rearanged (Issue #128)
+<ul>
+  <li>Improved keyboard typeahead navigation</li>
+  <li>Option to disable "Delete" menu entry in context menu</li>
+  <li>Ask for confirmation before desktop icons are rearanged</li>
+</ul>
 
 <h2>exo</h2>
-
-- exo-icon-chooser-dialog: Focus filter entry by default
-- exo-icon-chooser-dialog: Set default to show to all icons
-- exo-icon-chooser-dialog: Speed up sorting the icon view model
+<ul>
+  <li>Various improvements for the exo-icon-chooser-dialog</li>
+</ul>
 
 <h2>xfce4-settings</h2>
-
-- mime-helpers: Add Alacritty and kitty (Fixes #378)
-
-- Add Flatpak binaries (#360)
-- Use 2 decimals for refresh rate (Issue #351)
-
-- settings-manager: Always show the search entry, no slider, no button
-- display: Add 'autoconnect mode' setting (Fixes #311)
-
-- mime-settings: Allow filtering by application name
-- appearance: Add option to sync xfwm4 theme
-- display: Add 1.25 and 1.75 ratios to presets
-
+<ul>
+  <li>xfce4-display-settings - use two decimals for refresh rate</li>
+  <li>xfce4-display-settings - Add 1.25 and 1.75 ratios to scale presets</li>
+  <li>xfce4-display-settings: Add 'autoconnect mode' SCREENSHOT</li>
+  <li>xfce4-settings-manager: Always show the search entry, no slider, no button SCREENSHOT</li>
+  <li>xfce4-mime-settings: Allow filtering by application name SCREENSHOT</li>
+  <li>xfce4-appearance-settings: Add option to sync xfwm4 theme SCREENSHOT</li>
+</ul>
 <h2>thunar</h2>
+<ul>
+  <li>List View: Add file count to size column for directories SCREENSHOT</li>
 
-- List View: Add file count to size column for directories (Issue #61)
+<li>Add Image preview sidepane  SCREENSHOT</li>
+<li>Add multi-level undo/redo  SCREENSHOT</li>
 
-- Add Image preview sidepane (Issue #357)
-- Add multi-level undo/redo (Issue #819)
+<li>Add posibillity to set custom color to specific files  SCREENSHOT</li>
 
-- Add posibillity to set custom color to specific files (Issue: #160)
-- Create separate section for thumbnail settings in preferences dialog
+<li>Add toolbar button to show menubar when hidden  SCREENSHOT</li>
+<li>Allow to customize toolbar SCREENSHOT</li>
+<li>Add option for horizontal/vertical split panes  SCREENSHOT</li>
+<li>Option to show full path in tabs  SCREENSHOT</li>
 
-- Bulk renamer: Rename in multiple iterations (Issue #108)
+<li>Support shared thumbnail repositories</li>
+<li>Create separate section for thumbnail settings in preferences dialog  SCREENSHOT</li>
+<li>Add preference to limit the maximum file size to be thumbnailed  SCREENSHOT</li>
+<li>Support for thumbnail size x-large and xx-large  SCREENSHOT</li>
 
-- Add toolbar button to show menubar when hidden (Issue #174)
-- Allow to customize toolbar by using custom actions (Issues #607 #621)
-- Add option for vertical split panes (#722)
-- Option to show full path in tabs (Issue #627)
-- Shortcuts View: Allow devices a drag and drop target (Issue #708)
+<li>Add a GUI shortcuts editor  SCREENSHOT</li>
 
-- Support for thumbnail size x-large and xx-large (Issue #606)
-- Add a GUI shortcuts editor (Issue #279)
+<li>Possibility to customize the statusbar SCREENSHOT</li>
 
-- Feature: Statusbar customization (Issue #666)
+<li>Add option to verify file checksums on copy  SCREENSHOT</li>
+<li>Add a new 'Open Item Location' entry in the right click context menu (search and recent) SCREENSHOT</li>
+<li>On-board recursive Search in Thunar  SCREENSHOT</li>
 
-- Support thumbnails for symlinks (and devices / unknowns)
-- Add option to verify file checksums on copy (Issue #511)
-- Add a new 'Open Item Location' entry in the right click context menu (search and recent)
-- On-board recursive Search in Thunar (Issues #2, #28, #290)
-- Support shared thumbnail repositories (Issue #262)
-- Add preference to limit the maximum file size to be thumbnailed (#310)
-- Optionally Use *.partial~ as an intermediate file for copy
-- Provide additional menu item for trashed files: "restore and open 
-folder" (Issue #382)
 
-- Add possibility to 'trust' launchers (Issue #156)
-- Add a preference to restore tabs on startup (Issue #338)
-- Add support for gtk-recent (Issue #257)
-- Add zoom-level as a per-directory setting (Issue #418)
-- Generate incremental file name when a name collision is detected 
-(Issue #210)
-- Move bookmarks into a separate Bookmarks menu (Issue #572)
-- Support `Today`/`Yesterday` option for custom date styles (Issue #292)
-- On "Select by Pattern" add option for case sensitivity (Issue #173)
-- Add `Empty Trash` infobar while in the trash folder (Issue #11)
-- Add section 'Default Application' for app. selection (Issue #342)
-- BulkRenamer: Split 'Rename' button into 'Apply' and 'Done' (Issue #22)
-- Add menu entry 'Set Default App' to 'Open with' submenu (Issue #342)
-- Add 'date deleted' column for the trash directory, sorting, (Issue #123)
-- Add suffix '- Thunar' to the title bar (Issue #482)
-- Add option to forget application association (Issue #197)
-- New feature: Split View (Issue #445)
-- Improve file operations progress dialog (Issue #365)
-- Add option to unselect all files (Issue #424)
-- Add submenus for custom actions (Issue #184)
-- Add toggle in preferences to allow running shell scripts (Issue #224)
-- Add support for "file creation date" (list column, properties dialog, soring )
+<li>Optionally Use *.partial~ as an intermediate file for copy SCREENSHOT</li>
+<li>Provide additional menu item for trashed files: "restore and open folder" SCREENSHOT</li>
 
+<li>Add possibility to 'trust' launchers (Issue #156) SCREENSHOT</li>
+<li>Add a preference to restore tabs on startup SCREENSHOT</li>
+<li>Add support for gtk-recent (Issue #257) SCREENSHOT</li>
+<li>Add zoom-level as a per-directory setting (Issue #418) SCREENSHOT</li>
+<li>Move bookmarks into a separate Bookmarks menu (Issue #572) SCREENSHOT</li>
+<li>Support `Today`/`Yesterday` option for custom date styles</li>
+<li>On "Select by Pattern" add option for case sensitivity</li>
+<li>Add `Empty Trash` infobar while in the trash folder (Issue #11) SCREENSHOT</li>
+
+<li>Add section 'Default Application' for app. selection (Issue #342) SCREENSHOT</li>
+<li>Add option to forget application association</li>
+<li>Add menu entry 'Set Default App' to 'Open with' submenu (Issue #342) SCREENSHOT</li>
+
+<li>BulkRenamer: Split 'Rename' button into 'Apply' and 'Done' (Issue #22) SCREENSHOT</li>
+
+<li>Add 'date deleted' column for the trash directory SCREENSHOT</li>
+
+<li>Add option to unselect all files (Issue #424) SCREENSHOT</li>
+<li>Add submenus for custom actions (Issue #184) SCREENSHOT</li>
+<li>Add toggle in preferences to allow running shell scripts (Issue #224) SCREENSHOT</li>
+<li>Add support for "file creation date" (list column, properties dialog, soring ) SCREENSHOT</li>
+</ul>
 <h2>xfwm4</h2>
-
-- Make workspace setting workable with other window managers
-- compositor: Add support for adaptive vsync with GLX
-- Added radio buttons and checkboxes to window menu
-
+<ul>
+ <li>Make workspace setting workable with other window managers</li>
+ <li> compositor: Add support for adaptive vsync with GLX </li>
+ <li>Added radio buttons and checkboxes to window menu</li>
+</ul>
 <h2>General</h2>
-- Improved support for UI scaling (fixed most blurry icons)
-- CSD
+<ul>
+  <li>Improved support for UI scaling and fixage for most blurry icons in the core components. This will be particulary usefull for HiDPI screens.</li>
+  <li>All header bars of Xfce Windows/Dialogs by default will be drawn by the window manager (Xfwm4). Some dialogs optionally support GtkHeaderBar (CSD) which can be enabled via an xfconf setting.</li>
+</ul>
 
-
-
-
-            <p>Phew, that was alot of stuff. Note that I only showed new features here. Of course as well tons of bugfixes made it into 4.18.0 (full changelog) ! Though like always after a mayjor release I am pretty sure folks out there will find various more things to improve regarding the new features.</p>
+            <p>Phew, that was alot of stuff. Note that I only showed new features here. Of course as well tons of bugfixes made it into 4.18.0 (full changelog) ! Like always after a mayjor release I am pretty sure Xfce folks out there will find various more things to improve regarding the new features.</p>
             <p>I hope we did not introduce any regression .. if you spot one, please dont hestitate to report it on our isssue tracker.[link to wiki .. how to report a bug]</p>
 
         </div>

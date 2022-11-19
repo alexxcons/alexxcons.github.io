@@ -23,101 +23,120 @@
 
             <p>So assuming you have installed Xfce 4.16, here an overview on the new features you will see on an upgrade to Xfce 4.18. For the sake of readibility, this list only shows main highlights. Check the component specific changelog for a complete, detailed list of bugfixes, internal changes, translation updates etc.</p>
 
-<!-- <h2>libxfce4util</h2> Nothing of interest -->
-
 <h2>libxfce4ui</h2>
-
   <h3>XfceFilenameInput</h3>
-    <p>A confortable widget for filename input was added, in order to prevent invalid filenames early and give visual feedback TODO SCREENSHOTS</p>
-
+    <p>A confortable widget for filename input was added in order to prevent invalid filenames early and give visual feedback.</p>
+    <img class="full-img" src="images/blogpost_new/xfce4ui-new-file-dialog1.png" alt="XfceFilenameInput - trailing whitespaces"/>
+    <img class="full-img" src="images/blogpost_new/xfce4ui-new-file-dialog2.png" alt="XfceFilenameInput - slash"/>
   <h3>XfceShortcutsEditor</h3>
-    <p>A shortcut editor widget was introduce in order to have a graphical interface to modify shortcuts. Currently it is used in Thunar and xfce4-terminal TODO SCREENSHOTS</p>
-
-<!-- <h2>garcon (Menu Library)</h2> Nothing of interest -->
+    <p>A shortcut editor widget was introduce in order to have a graphical interface to modify shortcuts. Currently it is used in Thunar and xfce4-terminal.</p>
+    <img class="full-img" src="images/blogpost_new/xfce4ui-shortcuts-editor.png" alt="XfceShortcutsEditor in Thunar"/>
 
 <h2>tumbler</h2>
   <p>Some performance improvements for the pixbuf-thumbnailer and the scheduler were done. As well now there are multiple overwrite options for the desktop-thumbnailer.</p>
-  <p>There is now supports for the thumbnail sizes x-large and xx-large, which are useful for high resolution displays TODO SCREENSHOTS</p>
+  <p>There is now supports for the thumbnail sizes x-large and xx-large, which are useful for high resolution displays</p>
   <p>Tumbler and Thunar now support shared thumbnail repositories, like described in the freedesktop.org thumbnail specification.
-      This feature can be used to produce thumbnails for a folder in advance, directly attached to the pictures. Like that the thumbnails dont need to be re-generated for each individual user. LINK TO ISSUE
+      This feature can be used to produce thumbnails for a folder in advance, directly attached to the pictures. Like that the thumbnails dont need to be re-generated for each individual user.
   </p>
+
 <h2>xfce4-panel</h2>
-  <p>The DateTime and the Clock plugin provided overlapping functionallity. In order to prevent parallel development, they have been merged into a single plugin SCREENSHOT</p>
-  <p>The new Clock plugin as well has a binary time mode now and and provides a sleep monitor SCREENSHOT</p>
+  <p>The DateTime and the Clock plugin provided overlapping functionallity. In order to prevent parallel development, they have been merged into a single plugin.</p>
+  <img class="full-img" src="images/blogpost_new/panel-clock.png" alt="The new 'Clock' panel widget"/>
+  <p>The new Clock plugin as well has a binary time mode now and and provides a sleep monitor <b>TODO SCREENSHOT</b></p>
+  <img class="full-img" src="images/blogpost_new/" alt=""/>
+
 <h2>xfdesktop</h2>
   <p>Like in thunar, the "Delete" menu entry in the context menu can now be hidden.</p>
   <p>In order to dont mess the desktop by accident on pressing 'rearange desktop icons', the user is asked for confirmation now.</p>
+
 <h2>xfce4-settings</h2>
-  <p>The search entry for xfce4-settings-manager was a bit simplified. Now it will be always shwon, without any slider or button SCREENSHOT</p>
+  <p>The search entry for xfce4-settings-manager was a bit simplified. Now it will be always shwon, without any slider or button <b>TODO SCREENDHOT</b></p>
+  <img class="full-img" src="images/blogpost_new/" alt=""/>
   <h3>xfce4-display-settings</h3>
-    <p>xfce4-display-settings got some minor improvements and an 'autoconnect mode' SCREENSHOT</p>
-  <h3>xfce4-mime-settings</h3>
-    <p>xfce4-mime-settings now allows to filter by application name SCREENSHOT</p>
+    <p>xfce4-display-settings got some minor improvements and the possibility to decide what to do when a new display is connected.</p>
+    <img class="full-img" src="images/blogpost_new/settings-display.png" alt="xfce4-display-settings - minor improvements"/>
   <h3>xfce4-appearance-settings</h3>
-    <p>xfce4-appearance-settings got some an option to sync with the xfwm4 theme if possible SCREENSHOT</p>
+    <p>xfce4-appearance-settings got some an option to set a matching xfwm4 theme if available. <b>TODO SCREENDHOT</b></p>
+    <img class="full-img" src="images/blogpost_new/" alt=""/>
+
 <h2>thunar</h2>
 <h3>List View</h3>
-  <p>In the List View for directories the file count of directories can now be displayed in the size column SCREENSHOT</p>
-  <p>It is now possible to add a "file creation date" column and to sort accoringly SCREENSHOT</p>
-
+  <p>In the List View for directories the file count of directories can now be displayed in the size column</p>
+  <p>It is now possible to add a "file creation date" column and to sort accoringly</p>
+  <img class="full-img" src="images/blogpost_new/thunar-listview1.png" alt="Thunar - List View - Preferences"/>
+  <img class="full-img" src="images/blogpost_new/thunar-listview2.png" alt="Thunar - List View - File count and file creation date"/>
 <h3>Image Preview</h3>
-<p>A image preview sidepane has been added .. actually two different sidepanes from which you can choose SCREENSHOT</p>
-
+  <p>A image preview sidepane has been added .. actually two different sidepanes from which you can choose.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-preview1.png" alt="Thunar - Embedded Image Preview"/>
+  <img class="full-img" src="images/blogpost_new/thunar-preview2.png" alt="Thunar - Standalone Image Preview"/>
 <h3>Undo and Redo</h3>
-<p>It is now possible to undo multiple file operations and to redo them, in case you changed your mind. SCREENSHOT</p>
-
+  <p>It is now possible to undo multiple file operations and to redo them, in case you changed your mind</p>
+  <img class="full-img" src="images/blogpost_new/thunar-undo-redo.png" alt="Thunar - Undo and Redo"/>
 <h3>File Highlight</h3>
-<p>Files can be highlighted by setting the background and the filename to user-specific custom colors SCREENSHOT</p>
-
+  <p>Files can be highlighted by setting the background and the filename to user-specific custom colors.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-hightlight1.png" alt="Thunar - File Highlight Options"/>
+  <img class="full-img" src="images/blogpost_new/thunar-hightlight2.png" alt="Thunar - Hightlighted file in List View"/>
+  <img class="full-img" src="images/blogpost_new/thunar-hightlight3.png" alt="Thunar - Hightlighted files in Icon View"/>
 <h3>Toolbar</h3>
-<p>It is now possible to customize the toolbar according to your needs. An additional dialog has been added for that purpose.</p>
-<p>In order to keep a possibility to get the menubar back when it was removed by accident, a toolbar button has to be added which is only visible when the menubar is gone SCREENSHOT</p>
-
+  <p>It is now possible to customize the toolbar according to your needs. An additional dialog has been added for that purpose.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-toolbar1.png" alt="Thunar - Toolbar with all configurable Elements"/>
+  <img class="full-img" src="images/blogpost_new/thunar-toolbar2.png" alt="Thunar - Toolbar Configuration Dialog"/>
+  <p>In order to keep a possibility to get the menubar back when it was removed by accident, a toolbar button has to be added which is only visible when the menubar is gone <b>SCREENSHOT</b></p>
+  <img class="full-img" src="images/blogpost_new/missing" alt=""/>
 <h3>Split View</h3>
-<p>Thunar now provides the option to use horizontal/vertical split panes SCREENSHOT</p>
-
+  <p>Thunar now provides the option to use horizontal/vertical split panes.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-splitpanes.png" alt="Thunar - Split Panes"/>
 <h3>Statusbar</h3>
-<p>It is now possibility to customize the statusbar SCREENSHOT</p>
-
+  <p>It is now possibility to customize the statusbar.</p>
+    <img class="full-img" src="images/blogpost_new/thunar-statusbar.png" alt="Thunar - Statusbar Customization"/>
 <h3>Recursive Search</h3>
-<p>Thunar has now the possibility to search recursively dircetly inside Thunar itself SCREENSHOT</p>
-
+  <p>Thunar has now the possibility to search recursively dircetly inside Thunar itself.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-search1.png" alt="Thunar - Recursive Search"/>
+  <img class="full-img" src="images/blogpost_new/thunar-search2.png" alt="Thunar - Recursive Search Preferences"/>
 <h3>Recent</h3>
-<p>Recently used files can now be used in Thunar SCREENSHOT</p>
-
+  <p>Recently used files can now be used in Thunar.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-recent.png" alt="Thunar - Recently Used Files"/>
 <h3>Bookmark Menu</h3>
-<p>Bookmarks have been moved into a separate Bookmarks menu SCREENSHOT</p>
-
+  <p>Bookmarks have been moved into a separate Bookmarks menu.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-bookmarks.png" alt="Thunar - Bookmarks Menu"/>
 <h3>Trash directory</h3>
-<p>The trash directory now provides an infobar which gives easy access to `Empty Trash` and 'Restore' functionallity SCREENSHOT</p>
-<p>Add 'date deleted' column for the trash directory SCREENSHOT</p>
-
+  <p>The trash directory now provides an infobar which gives easy access to `Empty Trash` and 'Restore' functionallity.</p>
+  <p>Add 'date deleted' column for the trash directory.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-trash.png" alt="Thunar - Trash Infobar and Date Deleted Column"/>
 <h3>Default Applications</h3>
-<p>The management to set/unset default applications for specific mime types was improved SCREENSHOT context menu and dialog</p>
-
+  <p>The management to set/unset default applications for specific mime types was improved context menu and dialog.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-default-application1.png" alt="Thunar - Context Menu Entry to set Default Application"/>
+  <img class="full-img" src="images/blogpost_new/thunar-default-application2.png" alt="Thunar - Revamped Application Chooser Dialog"/>
 <h3>Custom Actions</h3>
-<p>It is now possible to arrange custom actions in cascading submenus. SCREENSHOT</p>
-
+  <p>It is now possible to arrange custom actions in cascading submenus.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-uca-submenu1.png" alt="Thunar - Custom Action Submenu"/>
+  <img class="full-img" src="images/blogpost_new/thunar-uca-submenu2.png" alt="Thunar - Custom Action Configuration Dialog"/>
 <h3>Preferences</h3>
-<p>The thumbnail settings in the preferences dialog got grouped together, and some new options are available SCREENSHOT</p>
-<p>Copy operations optionally can use *.partial~ as an intermediate file now. And after a copy copy/move operations there is now the option to verify the file checksums in order to make sure that no single bit got corrupted SCREENSHOT</p>
-<p>A checkbox was added in order to allow running shell scripts SCREENSHOT</p>
-<p>There is now the possibility to restore tabs on startup SCREENSHOT</p>
+  <p>The thumbnail settings in the preferences dialog got grouped together, and some new options are available.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-preferences1.png" alt="Thunar - Thumbnail Preferences"/>
+  <p>Copy operations optionally can use *.partial~ as an intermediate file now. And after a copy copy/move operations there is now the option to verify the file checksums in order to make sure that no single bit got corrupted.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-preferences2.png" alt="Thunar - File Transfer Preferences"/>
+  <p>A checkbox was added in order to allow running shell scripts.</p>
+  <img class="full-img" src="images/blogpost_new/thunar-preferences3.png" alt="Thunar - Script Execution Preferences"/>
+  <p>There is now the possibility to restore tabs on startup, and to showthe full directory path in the tab title</p>
+  <img class="full-img" src="images/blogpost_new/thunar-preferences4.png" alt="Thunar - Tab and Window Preferences"/>
+
 <h2>xfwm4</h2>
  <h3>Workspaces</h3>
    <p>Workspace setting will now work as well with other window managers</p>
  <h3>Compositor</h3>
    <p>The compositor now supports adaptive vsync with GLX </p>
- <h3>Preferences</h3>
-   <p>The window menu was revamped</p>
 
 <h2>General</h2>
-<ul>
-  <h3>Scaling</h3>
-    <p>Improved support for UI scaling and fixage for most blurry icons in the core components. This will be particulary usefull for HiDPI screens.</p>
-  <h3>Window Header Bars</h3>
-    <p>All header bars of Xfce Windows/Dialogs by default will be drawn by the window manager now (Xfwm4). Some dialogs optionally support GtkHeaderBar (CSD) which can be enabled via an xfconf setting.</p>
-</ul>
+
+<h3>Scaling</h3>
+  <p>Improved support for UI scaling and fixage for most blurry icons in the core components. This will be particulary usefull for HiDPI screens.</p>
+<h3>Window Header Bars</h3>
+  <p>All header bars of Xfce Windows/Dialogs by default will be drawn by the window manager now (Xfwm4). Some dialogs optionally support GtkHeaderBar (CSD) which can be enabled via an xfconf setting.</p>
+  <img class="full-img" src="images/blogpost_new/general-gtkheaderbar.png" alt="xfce-appearance-settings - Preference to enable GtkHeaderBar"/>
+
+<b>TODO Add links to GSoC Blogposts</b>
+
 
             <p>Phew, that was alot of stuff. Note that I only showed new features here. Of course as well tons of bugfixes made it into 4.18.0 (full changelog) ! Like always after a mayjor release I am pretty sure Xfce folks out there will find various more things to improve regarding the new features.</p>
             <p>I hope we did not introduce any regression .. if you spot one, please dont hestitate to report it on our isssue tracker.[link to wiki .. how to report a bug]</p>

@@ -18,32 +18,35 @@
             <h4>Dec 01,2022</h4>
             <h2>Xfce 4.18 released</h2>
 
-            <p>Xfce 4.16.0 got released almost two years ago. Meanwhile alot of major development happened for Xfce. Our team added a lot of nice new features and did a gazillion of bugfixes and minor improvements. Finally all that is going to be released for your pleasure.</p>
+            <p>After almost two years of work, we are happy to announce the release of Xfce 4.18 !</p>
+            <p>Since Xfce 4.16 alot of major development happened. Our team added multible nice new features, did a gazillion of bugfixes and did various minor improvements. Finally all that is going to be released for your pleasure.</p>
 
-            <p>So assuming you have installed Xfce 4.16, here an overview on the new features you will see on an upgrade to Xfce 4.18. For the sake of readibility, this list only shows main highlights. Check the component specific changelog for a complete, detailed list of bugfixes, internal changes, translation updates etc.</p>
-
+            <p>This development cycle was influenced alot by <a href="https://summerofcode.withgoogle.com/archive/2021/organizations/5706869816950784">GSoC 2021</a> and <a href="https://summerofcode.withgoogle.com/programs/2022/organizations/xfce">GSoC 2022</a>, which led to various new features, most of them for Thunar, the Xfce File Manager.
+            Though as well multiple other Xfce components got alot of love and many improvements were done under the hood.
+            </p>
+            <p>Assuming you have installed Xfce 4.16, here an overview on the major changes you will see on an upgrade to Xfce 4.18:</p>
 <h2>libxfce4ui</h2>
   <h3>XfceFilenameInput</h3>
-    <p>A confortable widget for filename input was added in order to prevent invalid filenames early and give visual feedback.</p>
+    <p>XfceFilenameInput is a confortable widget for filename input which was added in order to prevent invalid filenames at an early stage and to give detailed feedback on the concrete problem.</p>
     <img class="full-img" src="images/blogpost_new/xfce4ui-new-file-dialog1.png" alt="XfceFilenameInput - trailing whitespaces"/>
     <img class="full-img" src="images/blogpost_new/xfce4ui-new-file-dialog2.png" alt="XfceFilenameInput - slash"/>
   <h3>XfceShortcutsEditor</h3>
-    <p>A shortcut editor widget was introduce in order to have a graphical interface to modify shortcuts. Currently it is used in Thunar and xfce4-terminal.</p>
+    <p>This widget is a shortcut editor which was introduce in order to have a graphical interface to modify component-specific shortcuts. Currently it is only used inside Thunar and xfce4-terminal, though other components might follow..</p>
     <img class="full-img" src="images/blogpost_new/xfce4ui-shortcuts-editor.png" alt="XfceShortcutsEditor in Thunar"/>
 
 <h2>tumbler</h2>
   <p>Some performance improvements for the pixbuf-thumbnailer and the scheduler were done. As well now there are multiple overwrite options for the desktop-thumbnailer.</p>
-  <p>There is now supports for the thumbnail sizes x-large and xx-large, which are useful for high resolution displays</p>
+  <p>There is now supports for the thumbnail sizes x-large and xx-large, which are very useful for high resolution displays</p>
   <p>Tumbler and Thunar now support shared thumbnail repositories, like described in the freedesktop.org thumbnail specification.
-      This feature can be used to produce thumbnails for a folder in advance, directly attached to the pictures. Like that the thumbnails dont need to be re-generated for each individual user.
+      This feature can be used to produce thumbnails for a folder in advance, directly located near the pictures. Like that the thumbnails dont need to be re-generated for each individual user.
  
- <p>For more information on shared tumbnails as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog03.html">related blog post</a>.</p>
+ <p>For more information on shared tumbnails, check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog03.html">related blog post</a>.</p>
   </p>
 
 <h2>xfce4-panel</h2>
-  <p>The DateTime and the Clock plugin provided overlapping functionallity. In order to prevent parallel development, they have been merged into a single plugin.</p>
+  <p>The DateTime and the Clock plugin provided overlapping functionallity. In order to prevent parallel development they have been merged into a single plugin.</p>
   <img class="full-img" src="images/blogpost_new/panel-clock1.png" alt="The new 'Clock' panel widget"/>
-  <p>The new Clock plugin as well has a binary time mode now and and provides a sleep monitor.</p>
+  <p>The new Clock plugin received a new binary time mode now and provides a sleep monitor. Here a screenshot of all possible layouts which are: Analog, Binary, Digital, Fuzzy and LCD</p>
   <img class="full-img" src="images/blogpost_new/panel-clock2.png" alt="All possible Clock Modes"/>
 
 <h2>xfdesktop</h2>
@@ -51,56 +54,56 @@
   <p>In order to dont mess the desktop by accident on pressing 'rearange desktop icons', the user is asked for confirmation now.</p>
 
 <h2>xfce4-settings</h2>
-  <p>The search entry for xfce4-settings-manager was a bit simplified. Now it will be always shwon, without any slider or button.</p>
+  <p>The search entry for xfce4-settings-manager was a bit simplified. Now it will be always shown, without any slider or button.</p>
   <img class="full-img" src="images/blogpost_new/settings-main-dialog.png" alt=""/>
   <h3>xfce4-display-settings</h3>
-    <p>xfce4-display-settings got some minor improvements and the possibility to decide what to do when a new display is connected.</p>
+    <p>xfce4-display-settings got some minor improvements and the possibility to decide what to do when new displays are connected.</p>
     <img class="full-img" src="images/blogpost_new/settings-display.png" alt="xfce4-display-settings - minor improvements"/>
   <h3>xfce4-appearance-settings</h3>
-    <p>xfce4-appearance-settings got some an option to set a matching xfwm4 theme if available.</p>
+    <p>On selecting a new theme there is now the option to automatically set a matching xfwm4 theme if available.</p>
     <img class="full-img" src="images/blogpost_new/settings-appearance.png" alt="xfce4-appearance-settings - toggle to set matching Xfwm4 theme"/>
 
 <h2>thunar</h2>
 <h3>List View</h3>
-  <p>In the List View for directories the file count of directories can now be displayed in the size column</p>
-  <p>It is now possible to add a "file creation date" column and to sort accoringly</p>
+  <p>For directories the count of containing files can now be displayed in the size column. It is now possible to add a 'file creation date' column and the 'configure columns' dialog can be opened with a right-click on any column head.</p>
   <img class="full-img" src="images/blogpost_new/thunar-listview1.png" alt="Thunar - List View - Preferences"/>
   <img class="full-img" src="images/blogpost_new/thunar-listview2.png" alt="Thunar - List View - File count and file creation date"/>
 <h3>Image Preview</h3>
-  <p>A image preview sidepane has been added .. actually two different sidepanes from which you can choose.</p>
+  <p>Finally an image preview sidepane has been added to Thunar. No, wait, actually two of them! You can choose to either use the 'embedded' mode which will take no extra space, but hide parts of the left sidepane. Or you can go for the 'standalone' mode which will use a separate pane on the right and display as well some basic information.</p>
   <img class="full-img" src="images/blogpost_new/thunar-preview1.png" alt="Thunar - Embedded Image Preview"/>
   <img class="full-img" src="images/blogpost_new/thunar-preview2.png" alt="Thunar - Standalone Image Preview"/>
 <h3>Undo and Redo</h3>
-  <p>It is now possible to undo multiple file operations and to redo them, in case you changed your mind</p>
+  <p>It is now possible to undo basic file operations and to redo them. Undo and Redo can be used for 'move', 'rename', 'trash', 'link' and 'create' operations. Per default a history of the last 10 operations is stored, though the history length is configurable. Whenever a Undo/Redo is triggered, a notification with few details will be shwon.</p>
   <img class="full-img" src="images/blogpost_new/thunar-undo-redo.png" alt="Thunar - Undo and Redo"/>
 <h3>File Highlight</h3>
-  <p>Files can be highlighted by setting the background and the filename to user-specific custom colors.</p>
+  <p>Files now can be highlighted by setting the background and the filename to different colors. This can be done via an additional tab, located in the 'properties' dialog. The view menu provides a checkbox in order to enable/disable the feature. Once enabled, files now can be shown in all the colors of the rainbow.</p>
   <img class="full-img" src="images/blogpost_new/thunar-hightlight1.png" alt="Thunar - File Highlight Options"/>
   <img class="full-img" src="images/blogpost_new/thunar-hightlight2.png" alt="Thunar - Hightlighted file in List View"/>
   <img class="full-img" src="images/blogpost_new/thunar-hightlight3.png" alt="Thunar - Hightlighted files in Icon View"/>
-  <p>For more information on file highlight as well check the <a href="https://elessar-space.blogspot.com/2022/08/gsoc22-file-highlighting-in-thunar.html">related blog post</a>.</p>
+  <p>For more information on file highlight check the <a href="https://elessar-space.blogspot.com/2022/08/gsoc22-file-highlighting-in-thunar.html">related blog post</a>.</p>
 <h3>Toolbar</h3>
-  <p>It is now possible to customize the toolbar according to your needs. An additional dialog has been added for that purpose.</p>
+  <p>It is now possible to customize the toolbar according to your personal needs! An additional dialog has been added for that purpose on which the visibility and position of specifc items can be managed. As well custom actions which appear for folders can be used in the toolbar.</p>
+  <p>When the menubar is hidden, an additional toolbar button which can be used to show the menu will be displayed.</p>
   <img class="full-img" src="images/blogpost_new/thunar-toolbar1.png" alt="Thunar - Toolbar with all configurable Elements"/>
   <img class="full-img" src="images/blogpost_new/thunar-toolbar2.png" alt="Thunar - Toolbar Configuration Dialog"/>
-  <p>For more information on the configurable toolbar as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog10.html">related blog post</a>.</p>
-  <p>In order to keep a possibility to get the menubar back when it was removed by accident, a toolbar button has to be added which is only visible when the menubar is gone <b>SCREENSHOT</b></p>
   <img class="full-img" src="images/blogpost_new/thunar-toolbar3.png" alt="Thunar - Show Menubar button"/>
+  <p>For more information on the configurable toolbar check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog10.html">related blog post</a>.</p>
+
 <h3>Split View</h3>
-  <p>Thunar now provides the option to use horizontal/vertical split panes.</p>
+  <p>Thunar now provides the option to use split panes. The pane separator can be moved and it's position will be stored. Via an xfcon setting it is as well possible to have a vertical split. </p>
   <img class="full-img" src="images/blogpost_new/thunar-splitpanes.png" alt="Thunar - Split Panes"/>
 <h3>Statusbar</h3>
-  <p>It is now possibility to customize the statusbar.</p>
+  <p>The statusbar style was tweaked and '|' is now used to separate entries. Furthermore it is now possibility to customize it by using the context menu.</p>
     <img class="full-img" src="images/blogpost_new/thunar-statusbar.png" alt="Thunar - Statusbar Customization"/>
 <h3>Recursive Search</h3>
-  <p>Thunar has now the possibility to search recursively dircetly inside Thunar itself.</p>
+  <p>Thunar has now the possibility to search recursively dircetly inside Thunar itself. The search is done in a separate thread and search results are added rapidly into a List View. A new row 'Location' shows where the search results are located and the context menu provides the option 'Open Item Location' in order to travel there quickly. The preferences dialog provides an option to limit recursive search to local folders, or to disable it. </p>
   <img class="full-img" src="images/blogpost_new/thunar-search1.png" alt="Thunar - Recursive Search"/>
   <img class="full-img" src="images/blogpost_new/thunar-search2.png" alt="Thunar - Recursive Search Preferences"/>
-  <p>For more information on the recursive search feature as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog04.html">related blog post</a>.</p>
+  <p>For more information on the recursive search feature check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog04.html">related blog post</a>.</p>
 <h3>Recent</h3>
-  <p>Recently used files can now be used in Thunar.</p>
+  <p>Recently used files can now be used in Thunar. MORE TEXT NEEDED HERE NAD BELOW</p>
   <img class="full-img" src="images/blogpost_new/thunar-recent.png" alt="Thunar - Recently Used Files"/>
-  <p>For more information on 'recent' in Thunar as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog02.html">related blog post</a>.</p>
+  <p>For more information on 'recent' in Thunar check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog02.html">related blog post</a>.</p>
 <h3>Bookmark Menu</h3>
   <p>Bookmarks have been moved into a separate Bookmarks menu.</p>
   <img class="full-img" src="images/blogpost_new/thunar-bookmarks.png" alt="Thunar - Bookmarks Menu"/>
@@ -121,7 +124,7 @@
   <img class="full-img" src="images/blogpost_new/thunar-preferences1.png" alt="Thunar - Thumbnail Preferences"/>
   <p>File transfer operations optionally can use *.partial~ as an intermediate file now. And after a copy copy/move operations there is now the option to verify the file checksums in order to make sure that no single bit got corrupted.</p>
   <img class="full-img" src="images/blogpost_new/thunar-preferences2.png" alt="Thunar - File Transfer Preferences"/>
-  <p>For more information on the new file transfer options as well check the <a href="https://dev.ikx.kr/GSOC-5th/">related blog post</a>.</p>
+  <p>For more information on the new file transfer options check the <a href="https://dev.ikx.kr/GSOC-5th/">related blog post</a>.</p>
   
   <p>A checkbox was added in order to allow running shell scripts.</p>
   <img class="full-img" src="images/blogpost_new/thunar-preferences3.png" alt="Thunar - Script Execution Preferences"/>
@@ -152,8 +155,15 @@
 - Going to be used for Xfce4.18 Tour
 </ul>
 </p>
-            <p>Phew, that was alot of stuff. Note that I only showed new features here. Of course as well tons of bugfixes made it into 4.18.0 (full changelog) ! Like always after a mayjor release I am pretty sure Xfce folks out there will find various more things to improve regarding the new features.</p>
-            <p>I hope we did not introduce any regression .. if you spot one, please dont hestitate to report it on our isssue tracker.[link to wiki .. how to report a bug]</p>
+            <p>For the sake of readibility, this list only shows main highlights. Check the full <a href="https://www.xfce.org/download/changelogs">Xfce 4.18 changelog</a> for a detailed list of changes.</p> 
+
+            <p>This summary can as well be viewed as a <a href="https://www.xfce.org/about/tour418">localized online tour</a>.</p>
+
+            <p>This release <a href="https://archive.xfce.org/xfce/4.18">can be downloaded here</a>, either as a set of individual packages or as a single tarball including all these individual versions.</p>
+
+<p>&nbsp;</p>
+<p>Best regards,</p>
+<p>The Xfce development team</p>
 
         </div>
         <div id="footer" class="clear">

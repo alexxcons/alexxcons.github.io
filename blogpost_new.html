@@ -37,27 +37,29 @@
   <p>There is now supports for the thumbnail sizes x-large and xx-large, which are useful for high resolution displays</p>
   <p>Tumbler and Thunar now support shared thumbnail repositories, like described in the freedesktop.org thumbnail specification.
       This feature can be used to produce thumbnails for a folder in advance, directly attached to the pictures. Like that the thumbnails dont need to be re-generated for each individual user.
+ 
+ <p>For more information on shared tumbnails as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog03.html">related blog post</a>.</p>
   </p>
 
 <h2>xfce4-panel</h2>
   <p>The DateTime and the Clock plugin provided overlapping functionallity. In order to prevent parallel development, they have been merged into a single plugin.</p>
-  <img class="full-img" src="images/blogpost_new/panel-clock.png" alt="The new 'Clock' panel widget"/>
-  <p>The new Clock plugin as well has a binary time mode now and and provides a sleep monitor <b>TODO SCREENSHOT</b></p>
-  <img class="full-img" src="images/blogpost_new/" alt=""/>
+  <img class="full-img" src="images/blogpost_new/panel-clock1.png" alt="The new 'Clock' panel widget"/>
+  <p>The new Clock plugin as well has a binary time mode now and and provides a sleep monitor.</p>
+  <img class="full-img" src="images/blogpost_new/panel-clock2.png" alt="All possible Clock Modes"/>
 
 <h2>xfdesktop</h2>
   <p>Like in thunar, the "Delete" menu entry in the context menu can now be hidden.</p>
   <p>In order to dont mess the desktop by accident on pressing 'rearange desktop icons', the user is asked for confirmation now.</p>
 
 <h2>xfce4-settings</h2>
-  <p>The search entry for xfce4-settings-manager was a bit simplified. Now it will be always shwon, without any slider or button <b>TODO SCREENDHOT</b></p>
-  <img class="full-img" src="images/blogpost_new/" alt=""/>
+  <p>The search entry for xfce4-settings-manager was a bit simplified. Now it will be always shwon, without any slider or button.</p>
+  <img class="full-img" src="images/blogpost_new/settings-main-dialog.png" alt=""/>
   <h3>xfce4-display-settings</h3>
     <p>xfce4-display-settings got some minor improvements and the possibility to decide what to do when a new display is connected.</p>
     <img class="full-img" src="images/blogpost_new/settings-display.png" alt="xfce4-display-settings - minor improvements"/>
   <h3>xfce4-appearance-settings</h3>
-    <p>xfce4-appearance-settings got some an option to set a matching xfwm4 theme if available. <b>TODO SCREENDHOT</b></p>
-    <img class="full-img" src="images/blogpost_new/" alt=""/>
+    <p>xfce4-appearance-settings got some an option to set a matching xfwm4 theme if available.</p>
+    <img class="full-img" src="images/blogpost_new/settings-appearance.png" alt="xfce4-appearance-settings - toggle to set matching Xfwm4 theme"/>
 
 <h2>thunar</h2>
 <h3>List View</h3>
@@ -77,12 +79,14 @@
   <img class="full-img" src="images/blogpost_new/thunar-hightlight1.png" alt="Thunar - File Highlight Options"/>
   <img class="full-img" src="images/blogpost_new/thunar-hightlight2.png" alt="Thunar - Hightlighted file in List View"/>
   <img class="full-img" src="images/blogpost_new/thunar-hightlight3.png" alt="Thunar - Hightlighted files in Icon View"/>
+  <p>For more information on file highlight as well check the <a href="https://elessar-space.blogspot.com/2022/08/gsoc22-file-highlighting-in-thunar.html">related blog post</a>.</p>
 <h3>Toolbar</h3>
   <p>It is now possible to customize the toolbar according to your needs. An additional dialog has been added for that purpose.</p>
   <img class="full-img" src="images/blogpost_new/thunar-toolbar1.png" alt="Thunar - Toolbar with all configurable Elements"/>
   <img class="full-img" src="images/blogpost_new/thunar-toolbar2.png" alt="Thunar - Toolbar Configuration Dialog"/>
+  <p>For more information on the configurable toolbar as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog10.html">related blog post</a>.</p>
   <p>In order to keep a possibility to get the menubar back when it was removed by accident, a toolbar button has to be added which is only visible when the menubar is gone <b>SCREENSHOT</b></p>
-  <img class="full-img" src="images/blogpost_new/missing" alt=""/>
+  <img class="full-img" src="images/blogpost_new/thunar-toolbar3.png" alt="Thunar - Show Menubar button"/>
 <h3>Split View</h3>
   <p>Thunar now provides the option to use horizontal/vertical split panes.</p>
   <img class="full-img" src="images/blogpost_new/thunar-splitpanes.png" alt="Thunar - Split Panes"/>
@@ -93,9 +97,11 @@
   <p>Thunar has now the possibility to search recursively dircetly inside Thunar itself.</p>
   <img class="full-img" src="images/blogpost_new/thunar-search1.png" alt="Thunar - Recursive Search"/>
   <img class="full-img" src="images/blogpost_new/thunar-search2.png" alt="Thunar - Recursive Search Preferences"/>
+  <p>For more information on the recursive search feature as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog04.html">related blog post</a>.</p>
 <h3>Recent</h3>
   <p>Recently used files can now be used in Thunar.</p>
   <img class="full-img" src="images/blogpost_new/thunar-recent.png" alt="Thunar - Recently Used Files"/>
+  <p>For more information on 'recent' in Thunar as well check the <a href="http://users.uoa.gr/~sdi1800073/sources/xfce_blog02.html">related blog post</a>.</p>
 <h3>Bookmark Menu</h3>
   <p>Bookmarks have been moved into a separate Bookmarks menu.</p>
   <img class="full-img" src="images/blogpost_new/thunar-bookmarks.png" alt="Thunar - Bookmarks Menu"/>
@@ -114,8 +120,10 @@
 <h3>Preferences</h3>
   <p>The thumbnail settings in the preferences dialog got grouped together, and some new options are available.</p>
   <img class="full-img" src="images/blogpost_new/thunar-preferences1.png" alt="Thunar - Thumbnail Preferences"/>
-  <p>Copy operations optionally can use *.partial~ as an intermediate file now. And after a copy copy/move operations there is now the option to verify the file checksums in order to make sure that no single bit got corrupted.</p>
+  <p>File transfer operations optionally can use *.partial~ as an intermediate file now. And after a copy copy/move operations there is now the option to verify the file checksums in order to make sure that no single bit got corrupted.</p>
   <img class="full-img" src="images/blogpost_new/thunar-preferences2.png" alt="Thunar - File Transfer Preferences"/>
+  <p>For more information on the new file transfer options as well check the <a href="https://dev.ikx.kr/GSOC-5th/">related blog post</a>.</p>
+  
   <p>A checkbox was added in order to allow running shell scripts.</p>
   <img class="full-img" src="images/blogpost_new/thunar-preferences3.png" alt="Thunar - Script Execution Preferences"/>
   <p>There is now the possibility to restore tabs on startup, and to showthe full directory path in the tab title</p>
@@ -135,9 +143,17 @@
   <p>All header bars of Xfce Windows/Dialogs by default will be drawn by the window manager now (Xfwm4). Some dialogs optionally support GtkHeaderBar (CSD) which can be enabled via an xfconf setting.</p>
   <img class="full-img" src="images/blogpost_new/general-gtkheaderbar.png" alt="xfce-appearance-settings - Preference to enable GtkHeaderBar"/>
 
-<b>TODO Add links to GSoC Blogposts</b>
 
-
+<p>TODOs
+<ul>
+<li>Other images for UCA submenu - proper rotate command from WIki, and </li>
+<li>Write more text, check grammar</li>
+<li>fork project to gitlab.xfce</li>
+<li>Write Email to core devs, and as well link into IRC</li>
+- Please provide Merge requests
+- Going to be used for Xfce4.18 Tour
+</ul>
+</p>
             <p>Phew, that was alot of stuff. Note that I only showed new features here. Of course as well tons of bugfixes made it into 4.18.0 (full changelog) ! Like always after a mayjor release I am pretty sure Xfce folks out there will find various more things to improve regarding the new features.</p>
             <p>I hope we did not introduce any regression .. if you spot one, please dont hestitate to report it on our isssue tracker.[link to wiki .. how to report a bug]</p>
 

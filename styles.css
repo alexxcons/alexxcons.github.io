@@ -139,6 +139,11 @@ div#body h2{
     margin-bottom:10px;
 }
 
+.full-page-img {
+    height: 512px;
+    margin-bottom:10px;
+}
+
 div#footer {
     padding:20px 20px;
     margin-top:20px;

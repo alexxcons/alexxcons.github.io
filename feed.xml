@@ -13,41 +13,39 @@
         <div id="body" class="clear">
             <h4>Apr 20,2024</h4>
             <h2>Xfce is moving from IRC to Matrix</h2>
-            
-            <p>After 6 months of trial, as of 2024-04-01, <a href="https://www.xfce.org/">Xfce</a> moved the official communication channels from IRC to Matrix.</p>
-            
-            <p>The old IRC channels will stay open, so you can still hang out there, though the 'official' ones, e.g. linked in the <a href="https://docs.xfce.org/contribute/dev/start#communication_with_the_xfce_development_team">Xfce Wiki</a> now will be the Matrix channels.</p>
+
+            <p>After a 6-month trial period, as of April 1, 2024, <a href="https://www.xfce.org/">Xfce</a> moved its official communication channels from IRC to Matrix.</p>
+            <p>The old IRC channels will remain open, so you can still hang out there. However, the 'official' channels linked in the <a href="https://docs.xfce.org/contribute/dev/start#communication_with_the_xfce_development_team">Xfce Wiki</a> now will be the Matrix channels.</p>
 
             <p>This change affects the following channels:</p>
 
             <ul>
                 <li><a href="irc://irc.libera.chat/#xfce">#xfce</a> on libera.chat --&gt; <a href="https://matrix.to/#/#xfce:matrix.org">#xfce:matrix.org</a> -- general user support and discussion</li>
                 <li><a href="irc://irc.libera.chat/#xfce-dev">#xfce-dev</a> on libera.chat --&gt; <a href="https://matrix.to/#/#xfce-dev:matrix.org">#xfce-dev:matrix.org</a> -- development discussion</li>
-                <li><a href="irc://irc.libera.chat/#xfce-commits">#xfce-commits</a> on libera.chat --&gt; <a href="https://matrix.to/#/#xfce-commits:matrix.org">#xfce-commits:matrix.org</a> -- notable gitlab activity
+                <li><a href="irc://irc.libera.chat/#xfce-commits">#xfce-commits</a> on libera.chat --&gt; <a href="https://matrix.to/#/#xfce-commits:matrix.org">#xfce-commits:matrix.org</a> -- notable GitLab activity
                 </li>
             </ul>
 
             <p><b>Reasoning</b></p>
             
             <p>In the past, it was possible to connect and idle in libera IRC channels via <a href="https://matrix.org/ecosystem/bridges/irc/">Matrix.org bridge</a>.
-            Using Matrix to connect is very convenient, for several reasons:</p>
+            Using Matrix to connect is very convenient for several reasons:</p>
 
             <ul>
-                <li>When accessing IRC channels via Matrix bridge, it's not required to take care for an <a href="https://en.wikipedia.org/wiki/BNC_(software)">IRC bouncer</a>.
-                    Bridged Matrix channels keep messages which arrive while you are offline.</li>
-                <li>Chat history is synchronised across multiple devices by default. No special BNC setup required.</li>
+                <li>When accessing IRC channels via Matrix bridge, it's not necessary to manage an <a href="https://en.wikipedia.org/wiki/BNC_(software)">IRC bouncer</a>.
+                    Bridged Matrix channels retain messages that arrive while you are offline.</li>
+                <li>Chat history is synchronised across multiple devices by default. No special BNC setup is required.</li>
                 <li>The entry barrier for Matrix is lower than for IRC.</li>
-                <li>On IRC after answering a support question you might realize that the person asking it went offline hours ago (no BNC used) and as such you wasted your time. Wont happen if the question was raised from a Matrix user.</li>
+                <li>On IRC, after answering a support question, you might realize that the person asking it went offline hours ago (no BNC used) and as such you wasted your time. Wont happen if the question was raised by a Matrix user.</li>
             </ul>
-            <p>As such, several people started to connect to the Xfce IRC channels via Matrix (including myself). On July 2023 however, the party was over.
+            <p>As such, several people started connecting to the Xfce IRC channels via Matrix (including myself). However, on July 2023, the party was over.
             <a href="https://libera.chat/news/matrix-deportalling">Libera.Chat decided to disable Matrix bridging</a> and suggested to use so-called "channel plumbing" until further notice.
-            I am not sure about the technical details here .. however in the end, <a href="https://libera.chat/news/matrix-bridge-disabled-retrospective">"plumbing" did not work out for some reason</a>.
-            On November 2023 it got clear that <a href="https://libera.chat/news/official-matrix-bridge-farewell">bridging would not come back either</a>.</p>
+            I'm not sure about the technical details here, but in the end, <a href="https://libera.chat/news/matrix-bridge-disabled-retrospective">"plumbing" did not work out for some reason</a>.
+            By November 2023 it became clear that <a href="https://libera.chat/news/official-matrix-bridge-farewell">bridging would not come back either</a>.</p>
             
-            <p>Meanwhile, Xfce communication became fragmented. Some people brushed the dust off their IRC-bouncers and used these again, some used a private Matrix server setup (Heisenbridge was still functional) and some just stayed on the Matrix channels, which were no longer interconnected to the IRC channels.</p>
-
+            <p>Meanwhile, Xfce communication became fragmented. Some people dusted off their IRC bouncers and used them again, some used a private Matrix server setup (Heisenbridge was still functional) and some just stayed on the Matrix channels, which were no longer interconnected to the IRC channels.</p>
             <p>In order to end that fragmentation and because of the above mentioned Matrix advantages, after 6 months of testing and adding some Matrix bots (real nice job Brian!), the Xfce team decided to prefer Matrix over IRC in the future and settle down there.</p>
-            <p>So even if you are a hard-core Xfce IRC user, please install the Matrix client of your choice and take a try for the shiny new(cough) possibilities offered by Matrix. Looking forward to see you in the Xfce Matrix channels!</p>
+            <p>So, even if you are a hardcore Xfce IRC user, please install the Matrix client of your choice and give the shiny new (cough) possibilities offered by Matrix a try. Looking forward to see you in the Xfce Matrix channels!</p>
         </div>
         ]]></description>
         </item>

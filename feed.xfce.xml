@@ -31,14 +31,14 @@
 
             <p><b>Reasoning</b></p>
             
-            <p>In the past, it was possible to connect and idle in libera IRC channels via <a href="https://matrix.org/ecosystem/bridges/irc/">Matrix.org bridge</a>.
+            <p>In the past, it was possible to connect and idle on libera IRC channels via <a href="https://matrix.org/ecosystem/bridges/irc/">Matrix.org bridge</a>.
             Using Matrix to connect is very convenient for several reasons:</p>
 
             <ul>
                 <li>When accessing IRC channels via Matrix bridge, it's not necessary to manage an <a href="https://en.wikipedia.org/wiki/BNC_(software)">IRC bouncer</a>.
                     Bridged Matrix channels retain messages that arrive while you are offline.</li>
                 <li>Chat history is synchronised across multiple devices by default. No special BNC setup is required.</li>
-                <li>The entry barrier for Matrix is lower than for IRC.</li>
+                <li>Based on personal experience, the entry barrier for Matrix seems to be lower than for IRC.</li>
                 <li>On IRC, after answering a support question, you might realize that the person asking it went offline hours ago (no BNC used) and as such you wasted your time. Won't happen if the question was raised by a Matrix user.</li>
             </ul>
             <p>As such, several people started connecting to the Xfce IRC channels via Matrix (including myself). However, on July 2023, the party was over.

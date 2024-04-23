@@ -4,17 +4,17 @@
 	<title>Alexxcon's Software Development Blog</title>
 	<link>https://alexxcons.github.io/</link>
 	<atom:link href="https://alexxcons.github.io/feed.xfce.xml" />
-	<pubDate>Sat, 20 Apr 2024 09:04:00 GMT</pubDate>
-	<lastBuildDate>Sat, 20 Apr 2024 09:04:00 GMT</lastBuildDate>
+	<pubDate>Tue, 23 Apr 2024 09:04:00 GMT</pubDate>
+	<lastBuildDate>Tue, 23 Apr 2024 09:04:00 GMT</lastBuildDate>
         <item>
             <title>Xfce is moving from IRC to Matrix</title>
             <author>Alexander Schwinn</author>
             <link>https://alexxcons.github.io/blogpost_10.html</link>
             <guid>https://alexxcons.github.io/blogpost_10.html</guid>
-            <pubDate>Sat, 20 Apr 2024 09:04:00 GMT</pubDate>
+            <pubDate>Tue, 23 Apr 2024 09:04:00 GMT</pubDate>
             <description><![CDATA[
         <div id="body" class="clear">
-            <h4>Apr 20,2024</h4>
+            <h4>Apr 23,2024</h4>
             <h2>Xfce is moving from IRC to Matrix</h2>
 
             <p>After a 6-month trial period, as of April 1, 2024, <a href="https://www.xfce.org/">Xfce</a> moved its official communication channels from IRC to Matrix.</p>

@@ -144,7 +144,7 @@ div#body {
 @media only screen and (max-width: 480px) {
 
     div#body {
-        width:420px;
+        width:400px;
     }
 
     div#wrapper {
@@ -152,7 +152,7 @@ div#body {
     }
 
     div#header h1{
-        font-size:26px;
+        font-size:24px;
         margin-left:10px;
         margin-top:40px;
     }

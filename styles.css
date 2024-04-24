@@ -128,7 +128,37 @@ div#body a {
 
 div#body {
     margin-top:50px;
+    margin-left:10px;
+    margin-right:10px;
 }
+
+/** tablet **/
+@media only screen and (max-width: 1024px) {
+
+    div#body {
+        width:950px;
+    }
+}
+
+/** smartphone **/
+@media only screen and (max-width: 480px) {
+
+    div#body {
+        width:420px;
+    }
+
+    div#wrapper {
+        width:480px;
+    }
+
+    div#header h1{
+        font-size:26px;
+        margin-left:10px;
+        margin-top:40px;
+    }
+}
+
+
 
 div#body h2{
 

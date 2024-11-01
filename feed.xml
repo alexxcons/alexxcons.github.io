@@ -4,6 +4,55 @@
 	<link>https://alexxcons.github.io/</link>
 	<description>Some blog posts related to (Xfce) software</description>
         <item>
+            <title>Xfce 4.20 Pre1 Release and Wallpaper Contest for Xfce 4.20</title>
+            <author>Alexander Schwinn</author>
+            <link>https://alexxcons.github.io/blogpost_11.html</link>
+            <guid>https://alexxcons.github.io/blogpost_11.html</guid>
+            <pubDate>Fri, 01 Nov 2024 22:04:00 GMT</pubDate>
+            <description><![CDATA[
+        <div id="body" class="clear">
+            <h4>Nov 01,2024</h4>
+            <h2>Xfce 4.20 Pre1 Released</h2>
+            <p>Dear Xfce community, I am happy to announce the release of Xfce4.20 pre1.</p>
+
+            <p>Xfce 4.20 Pre1 is a platform pre-release, which gives early adopters the possibility to test the new release and to check for compatibility.</p>
+
+            <p>Further implications for the pre1 release:<p>
+            <ul>
+                <li>In order to increase stability, no new features will be added to Xfce core components until the final release.</li>
+                <li>We will not add new strings either, in order to give translators the possibility to reach a complete translation for the final release.</li>
+            </ul>
+
+            <p>A detailed overview on the major changes introduced in Xfce4.20 will be given for the final release, <a href="https://wiki.xfce.org/releng/4.20/roadmap">planned for December 15th</a>.</p>
+
+            <p>Xfce4.20 pre1 includes all Xfce core components. The tarballs for building it can be found here:</p>
+            <ul>
+              <li><a href="https://archive.xfce.org/xfce/4.20pre1/src">Download individual tarballs</a></li>
+              <li><a href="https://archive.xfce.org/xfce/4.20pre1/fat_tarballs">Download one tarball which includes all releases</a></li>
+            </ul>
+            <p>Though, you might prefer to wait for distribution specific development packages.</p>
+
+            <h2>Wallpaper Contest for Xfce 4.20</h2>
+
+            <p>Like for Xfce 4.18 I would like to ask the Xfce community to contribute a few wallpapers. Everyone will have the opportunity to vote on them to elect the new default wallpaper for Xfce 4.20.</p>
+            
+            <p>If you possess the required skills, your contribution would be greatly appreciated!</p>
+
+            <p>Like the <a href="https://gitlab.xfce.org/artwork/public/-/tree/master/wallpapers">old Xfce wallpapers</a>, the new wallpaper should be a vector graphic with an unmodified <a href="https://gitlab.xfce.org/artwork/public/-/tree/master/logo">Xfce mouse</a> on it and some fancy shapes.</p>
+
+            <p>Note that the image must be all yours and needs to be licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. If you do not specify a license in your post, then we will assume that you are licensing the image under the CC BY-SA 4.0.</p>
+
+            <p>The image should not mention the software (FOSS or proprietary) used to create the wallpaper in the metainfo.</p>
+
+            <p>The deadline for submissions is the 15th of November. Like that, we will have two weeks left for voting and integration of the new wallpaper into the Xfce pre2 release.</p>
+
+            <p>In order to participate, take a look at the <a href="https://gitlab.xfce.org/artwork/public/-/issues/2">Xfce wallpaper contest GitLab issue</a>.</p>
+
+            <p>Please note that this year only the &#10084;&#65039; emoji will be considered as an upvote, in order to simplify vote counting. You can upvote as many wallpapers as you like.</p>
+        </div>
+        ]]></description>
+        </item>
+        <item>
             <title>Xfce is moving from IRC to Matrix</title>
             <author>Alexander Schwinn</author>
             <link>https://alexxcons.github.io/blogpost_10.html</link>

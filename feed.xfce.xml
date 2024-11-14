@@ -4,8 +4,32 @@
 	<title>Alexxcon's Software Development Blog</title>
 	<link>https://alexxcons.github.io/</link>
 	<atom:link href="https://alexxcons.github.io/feed.xfce.xml" />
-	<pubDate>Fri, 01 Nov 2024 22:04:00 GMT</pubDate>
-	<lastBuildDate>Fri, 01 Nov 2024 22:04:00 GMT</lastBuildDate>
+	<pubDate>Fri, 15 Nov 2024 22:30:00 GMT</pubDate>
+	<lastBuildDate>Fri, 15 Nov 2024 22:30:00 GMT</lastBuildDate>
+
+        <item>
+            <title>Wallpaper Contest for Xfce 4.20 open for voting</title>
+            <author>Alexander Schwinn</author>
+            <link>https://alexxcons.github.io/blogpost_12.html</link>
+            <guid>https://alexxcons.github.io/blogpost_12.html</guid>
+            <pubDate>Fri, 15 Nov 2024 22:30:00 GMT</pubDate>
+            <description><![CDATA[
+        <div id="body" class="clear">
+            <h4>Nov 15,2024</h4>
+            <h2>Wallpaper Contest for Xfce 4.20 open for voting</h2>
+
+            <p>The submission phase for the <a href="https://gitlab.xfce.org/artwork/public/-/issues/18">Xfce 4.20 wallpaper contest</a> is over now, and I am very happy to see numerous contributions.</p>
+            <p>While writing this blog post, 47 different wallpapers were submitted by 15 different authors.</p>
+            <p>Whatever will be the outcome of the contest, I would like to express my thanks to all these authors and wish all of them good luck for the voting period.</p>
+            <p>Starting by now, two weeks of voting will show which wallpapers are the most popular ones.</p>
+            <p>In order to cast your vote, login at <a href="https://gitlab.xfce.org/artwork/public/-/issues/18">gitlab.xfce.org</a> and add a &#10084;&#65039; reaction to all wallpapers you want to upvote. (Other emojis will not be counted)</p>
+            <p>Remember to vote for the best wallpaper, not just the best image. For instance, it's beneficial to provide free space for desktop items.</p> 
+            <p>Voting will be closed on 29. November. Like that, the new wallpaper can be utilized for the Xfce4.18 pre2 announce, which is planned for beginning of December.</p>
+            <p>Happy voting !</p>
+        </div>
+        ]]></description>
+        </item>
+
         <item>
             <title>Xfce 4.20 Pre1 Release and Wallpaper Contest for Xfce 4.20</title>
             <author>Alexander Schwinn</author>

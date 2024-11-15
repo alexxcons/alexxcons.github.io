@@ -18,16 +18,22 @@ table {
     width:100%;
     text-align:left;
 }
-th, td {
-    padding:5px 10px;
-}
-th {
-    color:#fff;
-    background-color:#630303;
-}
-td {
-    border-bottom:1px solid #f4f4f4;
-}
+
+/** indentation **/
+.t1 h3 {
+    margin-left: 20px;
+  }
+
+.t1 p {
+    margin-left: 40px;
+  }
+
+.t1 li {
+    margin-left: 40px;
+  }
+
+p.note { color:#ff0000}
+
 code, blockquote {
     display:block;
     border-left:5px solid #ddd;

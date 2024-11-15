@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="canonical" href="https://alexxcons.github.io/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="keywords" content="Xfce thunar GSoC alexxcons" />
+    <title>Alexxcon's Software Development Blog</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1><a href="index.html">Alexxcon's Software Development Blog</a></h1>
+        </div>
+        <div id="body" class="clear">
+            <h4>Dec 15,2024</h4>
+            <h2>Xfce 4.20 released</h2>
+
+            <p>After almost two years of work, we are happy to announce the release of Xfce 4.20.</p>
+            <p>Since Xfce 4.18 a lot of major development happened. Our team added many nice new features, did a gazillion of bug fixes and did various minor improvements. Finally, all that was released for your pleasure.</p>
+
+            <p>The major focus during this development cycle was the preparation of the codebase to be ready for wayland. So that we meanwhile have experimental wayland support for most components. More details in the 'Wayland' section below.<p>
+
+            <p>Assuming you have installed Xfce 4.18, here an overview on the major changes you will see on an upgrade to Xfce 4.20.</p>
+
+            <h2>General</h2>
+            <div class="t1">
+                <h3>Wayland</h3>
+                  <p>Thanks to <a href="https://gitlab.xfce.org/kelnos">Brian</a> and <a href="https://gitlab.xfce.org/Tamaranch">Gaël</a> meanwhile almost all Xfce components are able to run on Wayland windowing, while still keeping support for X11 windowing.</p>
+                  <p>This mayor effort was archived by abstracting away any X11/Wayland windowing specific calls and making use of wayland/wlroots protocols. A whole new Xfce library, "libxfce4windowing" was introduced during that process. XWayland will not be required to run any of the ported Xfce components.</p>
+                  <p>So far Xfce does not feature a window manager which supports Wayland. If you want to run Xfce in Wayland, Labwc and Wayfire will give you the best results. A detailed instruction on this can be found <a href="https://wiki.xfce.org/releng/wayland_roadmap#testing">here</a>. Please be aware that Wayland support still is experimental!</p>
+                  <p>There are plans to as well make Xfwm4 windowing system agnostic. However such a restructurization will be a major effort and we cannot tell yet when/if it will be done, so please don't hold your breath waiting for it.</p>
+
+                  <p>For few components and multiple features it was not possible to port them to wayland, partly because there are no standardized wayland protocols available yet to provide the required services:</p>
+                  <ul>
+                    <li>Workspace support is missing (wlr-workspace-unstable-v1 protocol is in work).</li>
+                    <li>Windowlist menu and window icons on desktop (wlr-foreign-toplevel-management-unstable-v1 protocol is in work).</li>
+                    <li>Systray icons will be missing for multiple applications (required to use Statusnotfier instead of GtkStatusIcon)</li>
+                    <li>Xfce4-settings: Keyboard and mouse-settings so far are internal to the Wayland compositor and as such the according Xfce dialogs wont be available on Wayland yet.</li>
+                    <li>Power related keyboard handling (brightness keys, suspend, etc.) is internal to the wayland compositor and as such cannot be supported yet by Xfce components.</li>
+                    <li>Wayland does not specify a native protocol for taking screenshots. However xfce4-screenshooter already supports screenshots via the wlroots 'screencopy' protocol (entire screen). Screenshots of a rectangle selection or the active window are not yet supported via Wayland.</li>
+                  </ul>
+                  <p>Some other Xfce components don't run at all on wayland:</p>
+                  <ul>
+                    <li>Xfwm4</li>
+                    <li>Xfdashboard</li>
+                    <li>Xfce4-windowck-plugin (relies on libwnck)</li>
+                    <li>Xfce4-xkb-plugin (relies on libwnck)</li>
+                    <li>Xfce4-embed-plugin (anyhow unmaintained, still gtk2, possible to be dropped)</li>
+                  </ul>
+
+                  <p>More detailed info on on the current Wayland status can be found on our <a href="https://wiki.xfce.org/releng/wayland_roadmap">wayland roadmap.</a></p>
+                  <p class="note">@Gael, @Brian: In this section probably many things are not correct or missing. Please just open a MR or send me diffs to modify this section according to your needs. (Should we add any pictures?)
+                  I suppose we should bring https://wiki.xfce.org/releng/wayland_roadmap#testing up to date, to show how to test things in a good way. </p>
+
+                <h3>Scaling</h3>
+                  <p>Icons and thumbnail scaling was fixed for various components. Various missing icons for larger scales were added. Any blurriness when using Xfce components on a scaled display should be gone now.</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/exo/start" target="_blank">exo</a></h2>
+            <div class="t1">
+                <h3>Icon View Performance</h3>
+                  <p>By using different container types, the "Exo-Icon-View" now can handle 100.000 files and more without freezing.</p>
+
+                <h3>Type ahead search box</h3>
+                  <p>The type ahead search box in the exo icon view now always stays inside the according view widget.</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/libxfce4ui/start" target="_blank">libxfce4ui</a></h2>
+            <div class="t1">
+                <h3>Shortcut Editor</h3>
+                  <p>Shortcuts now can be used for multiple actions if they don't conflict with each other.</p>
+
+                <h3>Xfce4-About Dialog</h3>
+                  <p>The dialog now shows the distribution logo, information about the used windowing system and the used GPU.</p>
+                  <img class="full-img" src="images/blogpost_14/libxfce4ui_about.png" alt="libxfce4ui - xfce4-about dialog"/>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/libxfce4windowing/start" target="_blank">libxfce4windowing</a></h2>
+            <div class="t1">
+                <p>This library is new to Xfce. Libxfce4windowing is an abstraction library that attempts to present windowing concepts (screens, toplevel windows, workspaces, etc.) in a windowing-system-independent manner.
+
+                <p>Currently X11 is fully supported via libwnck. Wayland is partially supported by using various Wayland protocol extensions. However, the full range of operations available on X11 is not available on Wayland, due to missing features in these protocol extensions.</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/thunar/start" target="_blank">thunar</a></h2>
+            <div class="t1">
+
+                <h3>Mounted and Remote Locations</h3>
+                  <p>Mount points now show an emblem and have a specific type description.</p>
+                  <p>Ipv6 remote URLS are now supported.</p>
+                  <p>It is now possible to create symbolic links as well on remote locations./p>
+
+                <h3>Search</h3>
+                  <p>It is not required any more to wait until a search is finished to open the context menu on search results.</p>
+
+                <h3>Toolbar</h3>
+                  <p>A couple of new toolbar buttons where added:<p>
+                    <ul>
+                        <li>View Switcher - A drop down button to select a view.</li>
+                        <li>Menu - This hamburger button will show automatically in the toolbar, when the menubar is hidden. It will reveal a vertical menu, bar, when pressed.</li>
+                        <li>New Tab - Open a new tab using the current directory.</li>
+                        <li>New Window - Open a new window using the current directory.</li>
+                    </ul>
+                  <img class="full-img" src="images/blogpost_14/thunar_toolbar_new_items.png" alt="thunar - new toolbar buttons"/>
+                  <img class="full-img" src="images/blogpost_14/thunar_toolbar_hamburger.png" alt="thunar - improved hamburger toolbar button"/>
+                
+                  <p>On shrinking the Thunar window, toolbar items will now be moved to an overflow menu. Like that it is possible to maintain smaller thunar windows.</p>
+                  <p>Furthermore a bug was fixed which prevented the usage of submenu custom actions in the toolbar.</p>
+
+                <h3>Window Decorations</h3>
+                  <p>There is now an option to use client side decorations in Thunar (CSD).</p>
+                  <img class="full-img" src="images/blogpost_14/thunar_csd_with_menu.png" alt="thunar - CSD with menu"/>
+                  <img class="full-img" src="images/blogpost_14/thunar_csd_without_menu.png" alt="thunar - CSD without menu"/>
+
+                <h3>Statusbar</h3>
+                  <p>An option to show the number of hidden files in the statusbar was added.</p>
+
+                <h3>Recently Used Files</h3>
+                  <p>Only files which were successfully opened are now added to the list of recently used files.</p>
+                  <p>Directories wont be added to the recently used files any more.</p>
+
+                <h3>Symbolic Icons</h3>
+                  <p>There is now an option to use symbolic icons in the side pane and colored icons in the toolbar.</p>
+                  <img class="full-img" src="images/blogpost_14/thunar_symbolic_icons.png" alt="thunar - symbolic icons"/>
+                  <img class="full-img" src="images/blogpost_14/thunar_colored_icons.png" alt="thunar - colored icons"/>
+
+                <h3>Drag and Drop</h3>
+                  <p>While dragging files, folders are now opened automatically on hover.</p>
+                  <p>While dragging files, the focus of the split view pane is now updated when hovered.</p>
+
+                <h3>Performance</h3>
+                  <p>In the past you might have faced situation involving bigger numbers of files in which thunar showed a freeze. Due to various different performance measures thunar now is much more bullet-proof for action involving huge numbers of files.</p>
+                  <p>This was achieved by using appropriate container types, moving some actions into separate jobs and throttling of view-updates.</p>
+                  <p>A <a href="https://wiki.xfce.org/thunar/dev/integration_testcases"></a>number of integration testcases</a> will be used in order to keep performance on the current level in the future.</p>
+
+                <h3>Custom Actions</h3>
+                  <p>Shortcuts for custom action will now as well work when the custom action is located in a sub-menu.</p>
+
+                <h3>File Transfer</h3>
+                  <p>For file validation in thunar 4.18.x a md5 checksum was calculated for source and target file. This calculation turned out to be rather slow and actually superfluous.
+                  Now files are just compared directly. In addition the usage of direct I/O operations now attempts to prevent comparison of possibly cached buffers.</p>
+                  <p>An option was added to only copy files in parallel if the relevant devices are in idle state. This prevents possible fragmentation during copy for HDD drives.</p>
+                  <p>Transferring files no longer steals the current focus.</p>
+                  <p>The file transfer question dialog now provides the same options while having less buttons. In addition file thumbnails now are properly requested by the dialog.</p>
+                  <img class="full-img" src="images/blogpost_14/thunar_transfer_dialog.png" alt="thunar - file transfer dialog"/>
+
+                <h3>Launchers</h3>
+                  <p>By default launcher names instead of filenames are shown now for trusted launchers.</p>
+
+                <h3>Undo/Redo</h3>
+                  <p>The user now will be asked before any deletion will be done by an undo operation.</p>
+
+                <h3>Split View</h3>
+                  <p>A shortcut now can be used to toggle between split-view panes and the focused pane now uses different coloring.</p>
+                  <img class="full-img" src="images/blogpost_14/thunar_split_view.png" alt="thunar - split view"/>
+                  <p>A dialog will now ask for confirmation when closing split-pane with multiple tabs.</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/tumbler/start" target="_blank">tumbler</a></h2>
+            <div class="t1">
+                <p class="note">@Gael: Do we have Thumbler changes which we want to highlight here?</p>
+                <p class="note">Below the stuff from the Xfce-4.20 changelog</p>
+
+                <p>gepub-thumbnailer: Emit error signal if file location is unsupported</p>
+                <p>gepub-thumbnailer: Return if GBytes buffer is NULL</p>
+                <p>Disambiguate thumbnailer signals</p>
+                <p>scheduler: Fix ready/error signal forwarding</p>
+                <p>xdg-cache: Fix temporary file management when saving thumbnail</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfce4-appfinder/start" target="_blank">xfce4-appfinder</a></h2>
+            <div class="t1">
+
+                <p>The application list now as well can be navigated via Ctrl+N / Ctrl+P keys (VI default).</p>
+                <p>An option was added to close the Appfinder window automatically when focus is lost.</p>
+                <p>ctrl+enter can be used to execute commands immediately.</p>
+                <p>There is now an option to show generic names of launchers.</p>
+                <p>Appfinder optionally can now be launched as a daemon, so that it will respond even quicker.</p>
+                <p>An option allows now to launch items on a single click.</p>
+
+                <p>Here a comparison between xfce4-appfinder settings in Xfce4.18 (left) and Xfce4.20 (right).</p>
+                <img class="full-img" src="images/blogpost_14/appfinder_old.png" alt="xfce4-appfinder - settings Xfce 4.18"/>
+                <img class="full-img" src="images/blogpost_14/appfinder_new.png" alt="xfce4-appfinder - settings Xfce 4.18"/>
+
+                <p>Add support to application actions (<a href="https://gitlab.xfce.org/xfce/xfce4-appfinder/-/issues/86">#86</a>)</p>
+                <p class="note">@AndreLDM: I don't see these action .. maybe some missing dependency on my side. Could you please add info on it, if required? (Or should we drop the item?)</p>
+
+                <p>New option to toggle window visibility of background service (<a href="https://gitlab.xfce.org/xfce/xfce4-appfinder/-/issues/52">#52</a>)</p>
+                <p class="note">@AndreLDM: From a quick look I don't get what this one is about .. do we need to list it here?</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfce4-panel/start" target="_blank">xfce4-panel</a></h2>
+            <div class="t1">
+
+                <h3>General</h3>
+                  <p>The auto-hide feature was improved in multiple ways and now works much more reliable.</p>
+                  <p class="note">@Gael: You maybe want to add details on auto-hide improvements?</p>
+                  <p>The minimum button size was reduced, in order to improve the layout for very small panels.</p>
+                  <p>The border width of the panel is now configurable.</p>
+                  <p>It is now possible to set a background color or background image for the panel.</p>
+                  <img class="full-img" src="images/blogpost_14/panel_color.png" alt="xfce4-panel - colored background"/>
+
+                <h3>Clock</h3>
+                  <p>LCD clock: An option was added to visualize inactive segments.</p>
+                  <p>Analog: There is now an optional 24h mode.</p>
+                  <p>Digital: Week numbers now are shown optionally.</p>
+
+                <p>clock: Implement ConsoleKit sleep monitor</p>
+                <p>clock: Fix sync timeout</p>
+                <p class="note">@Gael: Not sure what the last two are about ..  relevant for the tour?</p>
+                
+                <h3>Show Desktop</h3>
+                  <p>There is now the possibility to show the desktop when hovering the mouse on the "show desktop" panel icon.</p>
+
+                <h3>Preferences</h3>
+                  <p>The 'delete' key can now be used to remove panel objects and several objects can be removed at once.</p>
+                  <p>Panel objects in the panel configuration list now will have the same icons as in the panel itself.</p>
+                  <img class="full-img" src="images/blogpost_14/panel_item_list.png" alt="xfce4-panel - panel configuration list"/>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfce4-power-manager/start" target="_blank">xfce4-power-manager</a></h2>
+            <div class="t1">
+
+                <h3>Screen Locking</h3>
+                  <p>There is no dedicated "security" tab any more. Lock screen management was massively simplified and "Light Locker" was dropped. Screen locking is now part of xfce4-screensaver.</p>
+                  <p>"lock-on-sleep" is now synchronized with other components via XfceScreensaver. A button to open xfce4-screensaver-preferences was added:</p>
+                  <img class="full-img" src="images/blogpost_14/power_manager_settings.png" alt="xfce4-power-manager - settings"/>
+                  <img class="full-img" src="images/blogpost_14/power_manager_screensaver.png" alt="xfce4-screensaver - settings"/>
+                  <p class="note">@Gael: Not sure about correctness/details about screen locking changes. Does it make sense at all to have a picture of the screensaver-settings? Would be great if you could fix whatever I got wrong here :D</p>
+
+                <h3>Power Settings</h3>
+                  <p>Support for handling different power profiles via power-profiles-daemon was added.</p>
+                  <p>In order to prevent uncontrolled power down, it is not possible an more to select "do nothing" on critical battery power.</p>
+                  <p>The overall charge state calculation was wrong for some cases and is now fixed.</p>
+                  <p>When the critical power dialog pops up, unintentional user actions are now prevented.</p>
+                  <p>There is now support for the hybrid sleep mode.</p>
+                  <p>The device details tab now as well shows the energy rate.</p>
+
+                <h3>Others</h3>
+                  <p>Several use-cases for lid close were fixed.</p>
+                  <p>There are now the options "shutdown" and "do nothing" on lid close.</p>
+                  <p>Buttons to change the brightness exponentially and keyboard backlight toggle keys now are supported.</p>
+                  <p>Use authorization info from systemd/ConsoleKit</p>
+                  @Gael: Not sure if the last item is relevant for the tour?
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfce4-session/start" target="_blank">xfce4-session</a></h2>
+            <div class="t1">
+                <p>The logout dialog will not provide a checkbox to enable session saving any more.</p>
+                <p>It is now possible to start a wayland session via 'startxfce4 --wayland'.</p>
+
+                <p>Minimal support for xdg-desktop-portal was added by registering for a wallpaper, screenshot and background xapp.</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfce4-settings/start" target="_blank">xfce4-settings</a></h2>
+            <div class="t1">
+
+                <h3>Appearance Settings</h3>
+                  <p>Icon themes are now loaded in a separate thread, in order to prevent a possible freeze.</p>
+                  <p>For icons themes which are known to be incomplete, a warning now will be shown.</p>
+                  <p>The usage of client side decorations is opt-in now, not opt-out.</p>
+                  <p>Dark themes now are identified and supported in a more reliable way. (Relevant e.g. for the Qogir and Orchis themes)</p>´
+
+                <h3>Display Settings</h3>
+                  <p>When several display profiles do match, the default display profile will be used now.</p>
+                  <p>Display profile names can now be edited.</p>
+                  <p>Scaling now always is done for both dimensions and the preview shows the resulting size.</p>
+                  <p>It is now allowed to mirror outputs which are disabled.</p>
+                  <p>Finding a valid mode by refresh rate now works as expected.</p>
+
+                <h3>Mouse Settings</h3>
+                  <p>A check box was added to toggle between adaptive and flat mouse accel profile.</p>
+                  <p>High resolution scrolling can now be enabled for mice which do support it.</p>
+                  <img class="full-img" src="images/blogpost_14/settings_mouse.png" alt="xfce4-settings - mouse"/>
+
+                <h3>Mime Settings</h3>
+                  <p>It is now possible to select/change multiple items at once.</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfconf/start" target="_blank">xfconf</a></h2>
+            <div class="t1">
+                <p>A systemd user unit, corresponding to the D-Bus session service is now added.</p>
+                <p>Whitespaces are now properly escaped when writing a xfconf channel to disk.</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfdesktop/start" target="_blank">xfdesktop</a></h2>
+            <div class="t1">
+
+              <h3>Background Management</h3>
+                <p>The handling of folders which do contain wallpapers was improved.</p>
+                <p class="note">@Brian: Maybe you could give some more details on this one?</p>
+                <p>Wallpaper image folders now are loaded fully asynchronously to prevent lag.</p>
+                <p>For random wallpaper cycling, wallpapers now are only repeated after all other wallpapers were shown.</p>
+                <p>Old Xfce backgrounds were ported from .png to .svg to be usable for large screens.</p>
+                <p>Gradients will now be rendered in a gamma-correct way.</p>
+
+              <h3>Icon grid</h3>
+                <p>There is now an option to sort folders before files.</p>
+                <p>The confirmation dialog for arranging desktop icons now is optional.</p>
+                <p>It is now possible to set custom colors for icon labels and icon background.</p>
+                <p>As a consequence of being windowing-system agnostic, file-selection is now limited to each single screen.</p>
+                <p>The icon grid is now stored in a much more reliable format, using YAML.</p>
+                <p>New files and dropped files now will be placed near the current cursor location.</p>
+              
+              <h3>Preferences</h3>
+                <p>The 'Desktop Icons' tab was fully reworked.</p>
+                <img class="full-img" src="images/blogpost_14/xfdesktop_settings_icons.png" alt="xfdesktop - settings - desktop icons"/>
+                <p>All shortcuts of Xfdesktop now can be configured, using the XfceShortcutsManagers widget.</p>
+                <img class="full-img" src="images/blogpost_14/xfdesktop_settings_shortcuts.png" alt="xfdesktop - settings - keyboard shortcuts"/>
+
+              <h3>Context Menu</h3>
+                <p>Cascading custom actions will now as well shown correctly in Xfdesktop.</p>
+                <p>It is now possible to open multiple selected folders at once.</p>
+                <p>Add a root context menu for the window icon manager</p>
+                <p class="note">@Brian: Not sure what this "root context menu" is about</p>
+            </div>
+
+            <h2><a href="https://docs.xfce.org/xfce/xfwm4/start" target="_blank">xfwm4</a></h2>
+            <div class="t1">
+
+              <p class="note">@ofourdan: I have little to no idea about the changes on xfwm4 and cannot rate which of them could be relevant for the tour.
+                           It would be great if you could write few words, if there are things which could be relevant for the end-user. Below the items from the changelog:<p></p>
+
+                <p>Support for stretch theme variants</p>
+                <p>compositor: Block softpipe for GLX vsync</p>
+                <p>focus: Include skip taskbar/pager when passing focus</p>
+                <p>add missing break to fix crash when alt-tabbing (<a href="https://gitlab.xfce.org/xfce/xfwm4/-/issues/762">#762</a>)</p>
+                <p>screen: Fix uninitialized rect in myScreenGetXineramaMonitorGeometry</p>
+                <p>stacking: Use WIN_LAYER_FULLSCREEN for focused fullscreen windows</p>
+                <p>drop obsolete xfwm4rc</p>
+                <p>compositor: Expose just the window area</p>
+            </div>
+
+            <p>For the sake of readability, this list only shows main highlights. Check the full <a href="https://www.xfce.org/download/changelogs">Xfce 4.20 changelog</a> for a more detailed list of changes.</p> 
+            <p>The theme "Greybird-dark" and the icon-theme "elementary Xfce dark" were used for the screenshots. This summary can as well be viewed as a <a href="https://www.xfce.org/about/tour420">localized online tour</a>.</p>
+            <p>This release <a href="https://archive.xfce.org/xfce/4.20">can be downloaded here</a>, either as a set of individual packages or as a single tarball including all individual versions.</p>
+
+            <p>&nbsp;</p>
+            <p>Best regards,</p>
+            <p>The Xfce development team</p>
+        </div>
+        <div id="footer" class="clear">
+            <p class="right"><a href="https://github.com/alexxcons/alexxcons.github.io">page sources</a> | &copy; 2022 Alexander Schwinn</p>
+            <p class="left">
+                <a href="feed.xml"><img alt="rss" src="icons/rss.png" width="24" height="24"/></a>
+                <a href="https://gitlab.xfce.org/alexxcons"><img alt="gitlab" src="icons/gitlab.png" width="24" height="24"/></a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

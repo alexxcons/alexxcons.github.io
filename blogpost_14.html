@@ -32,16 +32,16 @@
 
                   <p>Thanks to <a href="https://gitlab.xfce.org/kelnos">Brian</a> and <a href="https://gitlab.xfce.org/Tamaranch">Gaël</a> meanwhile almost all Xfce components are able to run on Wayland windowing, while still keeping support for X11 windowing.</p>
                   <p>This major effort was achieved by abstracting away any X11/Wayland windowing specific calls and making use of Wayland/Wlroots protocols. A whole new Xfce library, "libxfce4windowing" was introduced during that process. XWayland will not be required to run any of the ported Xfce components.</p>
-                  <p>So far Xfce does not feature a window manager which supports Wayland. If you want to run Xfce in Wayland, Labwc and Wayfire will give you the best results. A detailed instruction on this can be found <a href="https://wiki.xfce.org/releng/wayland_roadmap#testing">here</a>. Please be aware that Wayland support still is experimental!</p>
-                  <p>There are plans to as well make Xfwm4 windowing system agnostic. However such a restructurization will be a major effort and we cannot tell yet when/if it will be done, so please don't hold your breath waiting for it.</p>
+                  <p>So far Xfce does not feature a window manager which supports Wayland. If you want to run Xfce in Wayland, Labwc and Wayfire will give you the best results. A detailed instruction on this can be found <a href="https://wiki.xfce.org/releng/wayland_roadmap#testing">here</a>. Please be aware that Wayland support is still experimental!</p>
+                  <p>There are plans to as well make Xfwm4 windowing system agnostic. However, such a restructurization will be a major effort and we cannot tell yet when/if it will be done, so please don't hold your breath waiting for it.</p>
 
-                  <p>For few components and multiple features it was not possible to port them to Wayland, partly because there are no standardized Wayland protocols available yet to provide the required services:</p>
+                  <p>For few components and multiple features, it was not possible to port them to Wayland, partly because there are no standardized Wayland protocols available yet to provide the required services:</p>
                   <ul>
                     <li>Workspace support is missing (ext-workspace protocol <a href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/40">is in work</a>).</li>
                     <li>Systray icons will be missing for multiple applications (required to use StatusNotifier instead of GtkStatusIcon)</li>
-                    <li>Xfce4-settings: Keyboard and mouse settings so far are internal to the Wayland compositor and as such the according Xfce dialogs wont be available on Wayland yet.</li>
+                    <li>Xfce4-settings: Keyboard and mouse settings so far are internal to the Wayland compositor and as such the according Xfce dialogs won't be available on Wayland yet.</li>
                     <li>Power related keyboard handling (brightness keys, suspend, etc.) is internal to the Wayland compositor and as such cannot be supported yet by Xfce components.</li>
-                    <li>Wayland does not specify a native protocol for taking screenshots. However xfce4-screenshooter already supports screenshots via the wlroots 'screencopy' protocol (entire screen). Screenshots of a rectangle selection or the active window are not yet supported via Wayland.</li>
+                    <li>Wayland does not specify a native protocol for taking screenshots. However, xfce4-screenshooter already supports screenshots via the wlroots 'screencopy' protocol (entire screen). Screenshots of a rectangle selection or the active window are not yet supported via Wayland.</li>
                   </ul>
                   <p>Some other Xfce components don't run at all on Wayland:</p>
                   <ul>
@@ -52,7 +52,7 @@
                     <li>Xfce4-xkb-plugin (keyboard handling is internal to the Wayland compositor)</li>
                   </ul>
 
-                  <p>More detailed info on on the current Wayland status can be found on our <a href="https://wiki.xfce.org/releng/wayland_roadmap">Wayland roadmap.</a></p>
+                  <p>More detailed info on the current Wayland status can be found on our <a href="https://wiki.xfce.org/releng/wayland_roadmap">Wayland roadmap.</a></p>
                   <p class="note">@Gael, @Brian: In this section probably many things are not correct or missing. Please just open a MR or send me diffs to modify this section according to your needs. (Should we add any pictures?)
                   I suppose we should bring https://wiki.xfce.org/releng/wayland_roadmap#testing up to date, to show how to test things in a good way. </p>
 
@@ -63,7 +63,7 @@
             <h2><a href="https://docs.xfce.org/xfce/exo/start" target="_blank">exo</a></h2>
             <div class="t1">
                 <h3>Icon View Performance</h3>
-                  <p>By using different container types, the "Exo-Icon-View" now can handle 100.000 files and more without freezing.</p>
+                  <p>By using different container types, the "Exo-Icon-View" now can handle 100,000 files and more without freezing.</p>
 
                 <h3>Type ahead search box</h3>
                   <p>The type ahead search box in the exo icon view now always stays inside the according view widget.</p>
@@ -81,9 +81,9 @@
 
             <h2><a href="https://docs.xfce.org/xfce/libxfce4windowing/start" target="_blank">libxfce4windowing</a></h2>
             <div class="t1">
-                <p>This library is new to Xfce. Libxfce4windowing is an abstraction library that attempts to present windowing concepts (screens, toplevel windows, workspaces, etc.) in a windowing-system-independent manner.
+                <p>This library is new to Xfce. Libxfce4windowing is an abstraction library that attempts to present windowing concepts (screens, top level windows, workspaces, etc.) in a windowing-system-independent manner.
 
-                <p>Currently X11 is fully supported via libwnck. Wayland is partially supported by using various Wayland protocol extensions. However, the full range of operations available on X11 is not available on Wayland, due to missing features in these protocol extensions.</p>
+                <p>Currently, X11 is fully supported via libwnck. Wayland is partially supported by using various Wayland protocol extensions. However, the full range of operations available on X11 is not available on Wayland, due to missing features in these protocols extensions.</p>
             </div>
 
             <h2><a href="https://docs.xfce.org/xfce/thunar/start" target="_blank">thunar</a></h2>
@@ -91,16 +91,16 @@
 
                 <h3>Mounted and Remote Locations</h3>
                   <p>Mount points now show an emblem and have a specific type description.</p>
-                  <p>Ipv6 remote URLS are now supported.</p>
+                  <p>Ipv6 remote URLs are now supported.</p>
                   <p>It is now possible to create symbolic links as well on remote locations./p>
 
                 <h3>Search</h3>
                   <p>It is not required any more to wait until a search is finished to open the context menu on search results.</p>
 
                 <h3>Toolbar</h3>
-                  <p>A couple of new toolbar buttons where added:<p>
+                  <p>A couple of new toolbar buttons were added:<p>
                     <ul>
-                        <li>View Switcher - A drop down button to select a view.</li>
+                        <li>View Switcher - A drop-down button to select a view.</li>
                         <li>Menu - This hamburger button will show automatically in the toolbar, when the menubar is hidden. It will reveal a vertical menu, bar, when pressed.</li>
                         <li>New Tab - Open a new tab using the current directory.</li>
                         <li>New Window - Open a new window using the current directory.</li>
@@ -108,8 +108,8 @@
                   <img class="full-img" src="images/blogpost_14/thunar_toolbar_new_items.png" alt="thunar - new toolbar buttons"/>
                   <img class="full-img" src="images/blogpost_14/thunar_toolbar_hamburger.png" alt="thunar - improved hamburger toolbar button"/>
                 
-                  <p>On shrinking the Thunar window, toolbar items will now be moved to an overflow menu. Like that it is possible to maintain smaller thunar windows.</p>
-                  <p>Furthermore a bug was fixed which prevented the usage of submenu custom actions in the toolbar.</p>
+                  <p>On shrinking the Thunar window, toolbar items will now be moved to an overflow menu. Like that, it is possible to maintain smaller thunar windows.</p>
+                  <p>Furthermore, a bug was fixed which prevented the usage of submenu custom actions in the toolbar.</p>
 
                 <h3>Window Decorations</h3>
                   <p>There is now an option to use client side decorations in Thunar (CSD).</p>
@@ -121,7 +121,7 @@
 
                 <h3>Recently Used Files</h3>
                   <p>Only files which were successfully opened are now added to the list of recently used files.</p>
-                  <p>Directories wont be added to the recently used files any more.</p>
+                  <p>Directories won't be added to the recently used files anymore.</p>
 
                 <h3>Symbolic Icons</h3>
                   <p>There is now an option to use symbolic icons in the side pane and colored icons in the toolbar.</p>
@@ -133,23 +133,23 @@
                   <p>While dragging files, the focus of the split view pane is now updated when hovered.</p>
 
                 <h3>Performance</h3>
-                  <p>In the past you might have faced situation involving bigger numbers of files in which thunar showed a freeze. Due to various different performance measures thunar now is much more bullet-proof for action involving huge numbers of files.</p>
+                  <p>In the past, you might have faced situation involving bigger numbers of files in which thunar showed a freeze. Due to various different performance measures, thunar now is much more bullet-proof for action involving huge numbers of files.</p>
                   <p>This was achieved by using appropriate container types, moving some actions into separate jobs and throttling of view-updates.</p>
-                  <p>A <a href="https://wiki.xfce.org/thunar/dev/integration_testcases"></a>number of integration testcases</a> will be used in order to keep performance on the current level in the future.</p>
+                  <p>A <a href="https://wiki.xfce.org/thunar/dev/integration_testcases"></a>number of integration test cases</a> will be used in order to keep performance on the current level in the future.</p>
 
                 <h3>Custom Actions</h3>
                   <p>Shortcuts for custom action will now as well work when the custom action is located in a sub-menu.</p>
 
                 <h3>File Transfer</h3>
                   <p>For file validation in thunar 4.18.x a md5 checksum was calculated for source and target file. This calculation turned out to be rather slow and actually superfluous.
-                  Now files are just compared directly. In addition the usage of direct I/O operations now attempts to prevent comparison of possibly cached buffers.</p>
+                  Now files are just compared directly. In addition, the usage of direct I/O operations now attempts to prevent comparison of possibly cached buffers.</p>
                   <p>An option was added to only copy files in parallel if the relevant devices are in idle state. This prevents possible fragmentation during copy for HDD drives.</p>
                   <p>Transferring files no longer steals the current focus.</p>
-                  <p>The file transfer question dialog now provides the same options while having less buttons. In addition file thumbnails now are properly requested by the dialog.</p>
+                  <p>The file transfer question dialog now provides the same options while having less buttons. In addition, file thumbnails now are properly requested by the dialog.</p>
                   <img class="full-img" src="images/blogpost_14/thunar_transfer_dialog.png" alt="thunar - file transfer dialog"/>
 
                 <h3>Launchers</h3>
-                  <p>By default launcher names instead of filenames are shown now for trusted launchers.</p>
+                  <p>By default, launcher names instead of filenames are shown now for trusted launchers.</p>
 
                 <h3>Undo/Redo</h3>
                   <p>The user now will be asked before any deletion will be done by an undo operation.</p>
@@ -159,9 +159,9 @@
                   <img class="full-img" src="images/blogpost_14/thunar_expandable_folders.png" alt="thunar - expandable folders"/>
 
                 <h3>Split View</h3>
-                  <p>A shortcut now can be used to toggle between split-view panes and the focused pane now uses different coloring.</p>
+                  <p>A shortcut now can be used to toggle between split-view panes, and the focused pane now uses different coloring.</p>
                   <img class="full-img" src="images/blogpost_14/thunar_split_view.png" alt="thunar - split view"/>
-                  <p>A dialog will now ask for confirmation when closing split-pane with multiple tabs.</p>
+                  <p>A dialog will now ask for confirmation when closing a split-pane with multiple tabs.</p>
             </div>
 
             <h2><a href="https://docs.xfce.org/xfce/xfce4-appfinder/start" target="_blank">xfce4-appfinder</a></h2>
@@ -174,7 +174,7 @@
                 <p>Appfinder optionally can now be launched as a daemon, so that it will respond even quicker.</p>
                 <p>An option allows now to launch items on a single click.</p>
 
-                <p>Here a comparison between xfce4-appfinder settings in Xfce4.18 (left) and Xfce4.20 (right).</p>
+                <p>Here is a comparison between xfce4-appfinder settings in Xfce4.18 (left) and Xfce4.20 (right).</p>
                 <img class="full-img" src="images/blogpost_14/appfinder_old.png" alt="xfce4-appfinder - settings Xfce 4.18"/>
                 <img class="full-img" src="images/blogpost_14/appfinder_new.png" alt="xfce4-appfinder - settings Xfce 4.18"/>
 
@@ -204,7 +204,7 @@
                   <p>Icon size management has been improved overall, notably by switching to libxfce4windowing.</p>
 
                 <h3>Preferences</h3>
-                  <p>The 'delete' key can now be used to remove panel objects and several objects can be removed at once.</p>
+                  <p>The 'delete' key can now be used to remove panel objects, and several objects can be removed at once.</p>
                   <p>Panel objects in the panel configuration list now will have the same icons as in the panel itself.</p>
                   <img class="full-img" src="images/blogpost_14/panel_item_list.png" alt="xfce4-panel - panel configuration list"/>
             </div>
@@ -213,7 +213,7 @@
             <div class="t1">
 
                 <h3>Screen Locking</h3>
-                  <p>There is no dedicated "security" tab any more. Lock screen management was massively simplified and "Light Locker" was dropped. "lock-on-sleep" is now synchronized with xfce4-session and xfce4-screensaver.</p>
+                  <p>There is no dedicated "security" tab anymore. Lock screen management was massively simplified and "Light Locker" was dropped. "lock-on-sleep" is now synchronized with xfce4-session and xfce4-screensaver.</p>
                   <p>Screen locking settings are now only handled by xfce4-screensaver to avoid conflicts. A button to open xfce4-screensaver-preferences was added:</p>
                   <img class="full-img" src="images/blogpost_14/power_manager_settings.png" alt="xfce4-power-manager - settings"/>
                   <img class="full-img" src="images/blogpost_14/power_manager_screensaver.png" alt="xfce4-screensaver - settings"/>
@@ -233,7 +233,7 @@
 
             <h2><a href="https://docs.xfce.org/xfce/xfce4-session/start" target="_blank">xfce4-session</a></h2>
             <div class="t1">
-                <p>The logout dialog will not provide a checkbox to enable session saving any more.</p>
+                <p>The logout dialog will not provide a checkbox to enable session saving anymore.</p>
                 <p>It is now possible to start a Wayland session via 'startxfce4 --wayland'.</p>
 
                 <p>Minimal support for xdg-desktop-portal was added by registering for a wallpaper, screenshot and background xapp.</p>
@@ -244,20 +244,20 @@
 
                 <h3>Appearance Settings</h3>
                   <p>Icon themes are now loaded in a separate thread, in order to prevent a possible freeze.</p>
-                  <p>For icons themes which are known to be incomplete, a warning now will be shown.</p>
+                  <p>For icon themes which are known to be incomplete, a warning now will be shown.</p>
                   <p>The usage of client side decorations is opt-in now, not opt-out.</p>
                   <p>Dark themes now are identified and supported in a more reliable way. (Relevant e.g. for the Qogir and Orchis themes)</p>´
 
                 <h3>Display Settings</h3>
                   <p>The default display profile has been added to the list of profiles that can match, and will be used if more than one matches now.</p>
                   <p>Profile management has been extended to all profiles, not just those that match, and their names can now be edited.</p>
-                  <p>Scaling now always is done for both dimensions and the preview shows the resulting size.</p>
+                  <p>Scaling now always is done for both dimensions, and the preview shows the resulting size.</p>
                   <p>Mirror state management has been improved overall, in particular by removing the need to match refresh rates.</p>
                   <p>The minimal dialog has been improved, in particular by allowing the display to be extended to the left and from top to bottom, and with compact profile display.</p>
                   <img class="full-img" src="images/blogpost_14/settings_display.png" alt="xfce4-settings - minimal display"/>
 
                 <h3>Mouse Settings</h3>
-                  <p>A check box was added to toggle between adaptive and flat mouse accel profile.</p>
+                  <p>A checkbox was added to toggle between adaptive and flat mouse accel profile.</p>
                   <p>High resolution scrolling can now be enabled for mice which do support it.</p>
                   <img class="full-img" src="images/blogpost_14/settings_mouse.png" alt="xfce4-settings - mouse"/>
 
@@ -267,7 +267,7 @@
 
             <h2><a href="https://docs.xfce.org/xfce/xfconf/start" target="_blank">xfconf</a></h2>
             <div class="t1">
-                <p>A systemd user unit, corresponding to the D-Bus session service is now added.</p>
+                <p>A systemd user unit, corresponding to the D-Bus session service, is now added.</p>
                 <p>Whitespaces are now properly escaped when writing a xfconf channel to disk.</p>
                 <p>Xfconf-query now displays array contents.</p>
             </div>
@@ -327,7 +327,7 @@
             <h2>Our Sponsors</h2>
             <div class="t1">
               <p>Thanks go to <a href="https://www.gandi.net" target="_blank">Gandi</a> for providing the Xfce server infrastructure for free, and to <a href="https://kalmarndc.se" target="_blank">Kalmar NDC</a> for sponsoring our GitLab runners. We appreciate your support!</p>
-              <p>As well many thanks to our generous financial supporters on <a href="https://opencollective.com/xfce" target="_blank">Open Collective US</a> and <a href="https://opencollective.com/xfce-eu" target="_blank">Open Collective EU</a>!</p>
+              <p>As well, many thanks to our generous financial supporters on <a href="https://opencollective.com/xfce" target="_blank">Open Collective US</a> and <a href="https://opencollective.com/xfce-eu" target="_blank">Open Collective EU</a>!</p>
               <p>At the moment, aside from the couple of hardware purchases for our developers, we don't have specific plans for the funds. We are exploring the best ways to use them effectively. It's reassuring to know we have such strong financial backing. Thank you for your support!</p>
             </div>
 

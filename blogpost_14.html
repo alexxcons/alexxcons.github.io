@@ -30,10 +30,10 @@
                 <h3>Wayland</h3>
                   <p><b>Important Notice:</b> Please be aware that the Wayland support in Xfce 4.20 is experimental. It is recommended for advanced users only, as you may encounter bugs and experience incomplete functionality. Proceed with caution!</p>
 
-                  <p>Thanks to <a href="https://gitlab.xfce.org/kelnos">Brian</a> and <a href="https://gitlab.xfce.org/Tamaranch">Gaël</a> meanwhile almost all Xfce components are able to run on Wayland windowing, while still keeping support for X11 windowing.</p>
+                  <p>Thanks to <a href="https://gitlab.xfce.org/kelnos">Brian</a> and <a href="https://gitlab.xfce.org/Tamaranch">Gaël</a> almost all Xfce components are able to run on Wayland windowing, while still keeping support for X11 windowing.</p>
                   <p>This major effort was achieved by abstracting away any X11/Wayland windowing specific calls and making use of Wayland/Wlroots protocols. A whole new Xfce library, "libxfce4windowing" was introduced during that process. XWayland will not be required to run any of the ported Xfce components.</p>
-                  <p>So far Xfce does not feature a window manager which supports Wayland. If you want to run Xfce in Wayland, Labwc and Wayfire will give you the best results. A detailed instruction on this can be found <a href="https://wiki.xfce.org/releng/wayland_roadmap#testing">here</a>. Please be aware that Wayland support is still experimental!</p>
-                  <p>There are plans to as well make Xfwm4 windowing system agnostic. However, such a restructurization will be a major effort and we cannot tell yet when/if it will be done, so please don't hold your breath waiting for it.</p>
+                  <p>So far Xfce does not feature a compositor which supports Wayland. If you want to run Xfce in Wayland, Labwc and Wayfire will give you the best results. A detailed instruction on this can be found <a href="https://wiki.xfce.org/releng/wayland_roadmap#testing">here</a>. Please be aware that Wayland support is still experimental!</p>
+                  <p>Plans are underway to add Wayland support to Xfwm4 while preserving its existing X11 functionality. However, such a restructurization will be a major effort and we cannot tell yet when/if it will be done, so please don't hold your breath waiting for it.</p>
 
                   <p>For few components and multiple features, it was not possible to port them to Wayland, partly because there are no standardized Wayland protocols available yet to provide the required services:</p>
                   <ul>
@@ -57,7 +57,7 @@
                   I suppose we should bring https://wiki.xfce.org/releng/wayland_roadmap#testing up to date, to show how to test things in a good way. </p>
 
                 <h3>Scaling</h3>
-                  <p>Icons and thumbnail scaling was fixed for various components. Various missing icons for larger scales were added. Any blurriness when using Xfce components on a scaled display should be gone now.</p>
+                  <p>Icons and thumbnail scaling was fixed for various components. Various missing icons for larger scales were added. Any blurriness when using Xfce components on a HiDPI display should be gone now.</p>
             </div>
 
             <h2><a href="https://docs.xfce.org/xfce/exo/start" target="_blank">exo</a></h2>
@@ -74,9 +74,9 @@
                 <h3>Shortcut Editor</h3>
                   <p>Shortcuts now can be used for multiple actions if they don't conflict with each other.</p>
 
-                <h3>Xfce4-About Dialog</h3>
+                <h3>About Dialog</h3>
                   <p>The dialog now shows the distribution logo, information about the used windowing system and the used GPU.</p>
-                  <img class="full-img" src="images/blogpost_14/libxfce4ui_about.png" alt="libxfce4ui - xfce4-about dialog"/>
+                  <img class="full-img" src="images/blogpost_14/libxfce4ui_about.png" alt="libxfce4ui - about dialog"/>
             </div>
 
             <h2><a href="https://docs.xfce.org/xfce/libxfce4windowing/start" target="_blank">libxfce4windowing</a></h2>
@@ -169,20 +169,14 @@
 
                 <p>The application list now as well can be navigated via Ctrl+N / Ctrl+P keys (VI default).</p>
                 <p>An option was added to close the Appfinder window automatically when focus is lost.</p>
-                <p>ctrl+enter can be used to execute commands immediately.</p>
-                <p>There is now an option to show generic names of launchers.</p>
+                <p>Ctrl+Enter can be used to execute commands immediately when selecting entries from the dropdown.</p>
+                <p>Within the new version, application specific actions will show on right click.</p>
+                <p>An option to show generic names of launchers was added.</p>
                 <p>Appfinder optionally can now be launched as a daemon, so that it will respond even quicker.</p>
                 <p>An option allows now to launch items on a single click.</p>
 
-                <p>Here is a comparison between xfce4-appfinder settings in Xfce4.18 (left) and Xfce4.20 (right).</p>
-                <img class="full-img" src="images/blogpost_14/appfinder_old.png" alt="xfce4-appfinder - settings Xfce 4.18"/>
                 <img class="full-img" src="images/blogpost_14/appfinder_new.png" alt="xfce4-appfinder - settings Xfce 4.18"/>
 
-                <p>Add support to application actions (<a href="https://gitlab.xfce.org/xfce/xfce4-appfinder/-/issues/86">#86</a>)</p>
-                <p class="note">@AndreLDM: I don't see these action .. maybe some missing dependency on my side. Could you please add info on it, if required? (Or should we drop the item?)</p>
-
-                <p>New option to toggle window visibility of background service (<a href="https://gitlab.xfce.org/xfce/xfce4-appfinder/-/issues/52">#52</a>)</p>
-                <p class="note">@AndreLDM: From a quick look I don't get what this one is about .. do we need to list it here?</p>
             </div>
 
             <h2><a href="https://docs.xfce.org/xfce/xfce4-panel/start" target="_blank">xfce4-panel</a></h2>

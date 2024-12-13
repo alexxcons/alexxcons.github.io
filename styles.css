@@ -138,6 +138,14 @@ div#body {
     margin-right:10px;
 }
 
+/** use natural image size **/
+img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+  }
+
 /** tablet or smartphone rotatet - screen width <= 1024 **/
 @media only screen and (max-width: 1024px) {
 
@@ -156,6 +164,11 @@ div#body {
 
     h2 {
         font-size:30px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -177,6 +190,11 @@ div#body {
 
     h2 {
         font-size:20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 

@@ -270,32 +270,39 @@
             <div class="t1">
 
               <h3>Background Management</h3>
-                <p>The handling of folders which do contain wallpapers was improved.</p>
-                <p class="note">@Brian: Maybe you could give some more details on this one?</p>
-                <p>Wallpaper image folders now are loaded fully asynchronously to prevent lag.</p>
                 <p>For random wallpaper cycling, wallpapers now are only repeated after all other wallpapers were shown.</p>
                 <p>Old Xfce backgrounds were ported from .png to .svg to be usable for large screens.</p>
                 <p>Gradients will now be rendered in a gamma-correct way.</p>
 
               <h3>Icon grid</h3>
-                <p>There is now an option to sort folders before files.</p>
                 <p>The confirmation dialog for arranging desktop icons now is optional.</p>
                 <p>It is now possible to set custom colors for icon labels and icon background.</p>
-                <p>As a consequence of being windowing-system agnostic, file-selection is now limited to each single screen.</p>
-                <p>The icon grid is now stored in a much more reliable format, using YAML.</p>
+                <p>The icon grid on each monitor is now independent of one another.</p>
+
+              <h3>Minimized Application Icons</h3>
+                <p>Window icons are now initially shown on the monitor where the window was present before being minimized.</p>
+                <p>The context menu (when clicking on an empty space) now has more useful options than before.</p>
+
+              <h3>File Icons</h3>
+                <p>There is now an option to sort folders before files.</p>
+                <p>The positions of the icons are now saved in a way that should avoid icons moving around in unexpected ways when monitors are added and removed.</p>
                 <p>New files and dropped files now will be placed near the current cursor location.</p>
+                <p>Icons fixed disks and drives can now be optionally shown.</p>
               
               <h3>Preferences</h3>
                 <p>The 'Desktop Icons' tab was fully reworked.</p>
                 <img class="full-img" src="images/blogpost_14/xfdesktop_settings_icons.png" alt="xfdesktop - settings - desktop icons"/>
                 <p>All shortcuts of Xfdesktop now can be configured, using the XfceShortcutsManagers widget.</p>
                 <img class="full-img" src="images/blogpost_14/xfdesktop_settings_shortcuts.png" alt="xfdesktop - settings - keyboard shortcuts"/>
+                <p>More folders that hold background images were added as shortcuts in the settings dialog.</p>
+                <p>The settings dialog will update if the background is changed from outside the dialog.</p>
+                <p>Wallpaper image folders now are loaded fully asynchronously to prevent lag.</p>
 
               <h3>Context Menu</h3>
                 <p>Cascading custom actions will now as well shown correctly in Xfdesktop.</p>
                 <p>It is now possible to open multiple selected folders at once.</p>
-                <p>Add a root context menu for the window icon manager</p>
-                <p class="note">@Brian: Not sure what this "root context menu" is about</p>
+                <p>The context menu now opens on button press rather than button release, as most users will expect.</p>
+                <p>The middle-click window list menu has new styling and added features.</p>
             </div>
 
             <h2><a href="https://docs.xfce.org/xfce/xfwm4/start" target="_blank">xfwm4</a></h2>

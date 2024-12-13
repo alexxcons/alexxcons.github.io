@@ -139,7 +139,7 @@ div#body {
 }
 
 /** use natural image size **/
-img {
+.full-img {
     width: auto;
     height: auto;
     max-width: none;
@@ -166,7 +166,8 @@ img {
         font-size:30px;
     }
 
-    img {
+    /** shrink as well full images **/
+    .full-img {
         max-width: 100%;
         height: auto;
     }
@@ -192,7 +193,8 @@ img {
         font-size:20px;
     }
 
-    img {
+    /** shrink as well full images **/
+    .full-img {
         max-width: 100%;
         height: auto;
     }
@@ -202,12 +204,6 @@ img {
 
 div#body h2{
 
-}
-
-.full-img {
-    height: 100%    ;
-    margin-bottom:10px;
-    margin-left:30px;
 }
 
 .full-page-img {

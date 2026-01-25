@@ -30,7 +30,7 @@
 
             <h3>Why doing a rewrite?</h3>
 
-            <p>The first attempt at creating an Xfce Wayland compositor involved modifying the existing Xfwm4 code to support both X11 and Wayland in parallel. However, this approach turned out to be the wrong path forward for several reasons:</p>
+            <p>The first attempt at creating an Xfce Wayland compositor involved modifying the existing xfwm4 code to support both X11 and Wayland in parallel. However, this approach turned out to be the wrong path forward for several reasons:</p>
             <ul>
               <li>Xfwm4 is architected in a way that makes it very difficult to put the window management behavior behind generic interfaces that don't include X11 specifics.</li>
               <li>Doing Xfwm4 refactoring is risky, since it might introduce new bugs to X11. Having two parallel code bases will allow for rapid development and experimentation with the Wayland compositor, with zero risk to break xfwm4.</li>

@@ -1,8 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
- <meta http-equiv='refresh' content='0; URL=http://example.com/'>
+    <link rel="canonical" href="https://alexxcons.github.io/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="keywords" content="Xfce Wayland Xfwl4 smithay alexxcons" />
+    <title>Alexxcon's Software Development Blog</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 
 <body>
@@ -14,19 +18,19 @@
             <h4>Jan 26,2026</h4>
             <h2>Xfwl4 - The roadmap for a Xfce Wayland Compositor</h2>
 
-            <p>The Xfce team is excited to share some news with our community and supporters:</p>
+            <p>We, the Xfce team are excited to share some great news!</p>
 
-            <p>We believe that we finally found a good usage for all the donated money. We’re funding the longtime Xfce core developer <a href="https://gitlab.xfce.org/kelnos">Brian Tarricone</a> to create xfwl4 — a brand-new Wayland compositor for Xfce.</p>
+            <p>After careful consideration, we’ve decided on a meaningful way to use the generous donations from our community: funding longtime Xfce core developer <a href="https://gitlab.xfce.org/kelnos" target="_blank">Brian Tarricone</a> to create xfwl4, a brand-new Wayland compositor for Xfce.</p>
 
-            <p>That will drain a significant portion of the project’s donated funds.</p>
+            <p>This initiative will utilize a significant portion of the project’s donated funds, but we believe it’s an important investment in Xfce’s future.</p>
  
-            <p>The goal is, that xfwl4 will offer the same functionality and behavior as xfwm4 does. Operating xfwl4 should just feel the same as xfwm4 feels on X11. It is planned to even reuse the existing xfwm4 configuration dialogs and xfconf settings.</p>
+            <p>The goal is, that xfwl4 will offer the same functionality and behavior as xfwm4 does. sing xfwl4 should feel just like using xfwm4 on X11. We even plan to reuse the existing xfwm4 configuration dialogs and xfconf settings to ensure a seamless transition.</p>
 
-            <p>Xfwl4 will not be based on the existing xfwm4 code, but instead will be a written from scratch in rust, using a very different technology stack, namely smithay.</p>
+            <p>Xfwl4 will not be based on the existing xfwm4 code, but instead will be a written from scratch in rust, using a very different technology stack, namely <a href="https://github.com/Smithay/smithay/" target="_blank">smithay</a>.</p>
 
             <h3>Why doing a rewrite?</h3>
 
-            <p>The first attempt for a Xfce Wayland compositor was, to modify the existing Xfwm4 code in order to support both windowing protocols, X11 and Wayland in parallel. However, that seemed to be the wrong way forward, for several reasons:</p>
+            <p>The first attempt at creating an Xfce Wayland compositor involved modifying the existing Xfwm4 code to support both X11 and Wayland in parallel. However, this approach turned out to be the wrong path forward for several reasons:</p>
             <ul>
               <li>Xfwm4 is architected in a way that makes it very difficult to put the window management behavior behind generic interfaces that don't include X11 specifics.</li>
               <li>Doing Xfwm4 refactoring is risky, since it might introduce new bugs to X11. Having two parallel code bases will allow for rapid development and experimentation with the Wayland compositor, with zero risk to break xfwm4.</li>
@@ -53,16 +57,12 @@
               <li>As well support for XWayland is part of the roadmap.</li>
               <li>The build system of the Xfce CI container will need to be upgraded in order to support building rust code via meson.</li>
             </ul>
-            <h3>Thank you</h3>
 
-            <p>Thanks go to <a href="https://www.gandi.net" target="_blank">Gandi</a> for providing the Xfce server infrastructure for free, and to <a href="https://kalmarndc.se" target="_blank">Kalmar NDC</a> for sponsoring our GitLab runners. We appreciate your support!</p>
-            <p>As well, many thanks to our generous financial supporters on <a href="https://opencollective.com/xfce" target="_blank">Open Collective US</a> and <a href="https://opencollective.com/xfce-eu" target="_blank">Open Collective EU</a> for supporting us!</p>
+            <p>Brian has already started work on the project, so stay tuned for the first development release of xfwl4, which we hope to share around mid-year.</p>
 
-            <p>Brian already started development of the project. So stay tuned to not miss the first development release of xfwl4, hopefully somewhat this year.</p>
+            <p>If you’re interested in the detailed reasoning behind the project or want to explore all the technical details, check out the <a href="https://wiki.xfce.org/private/wayland-compositor" target="_blank">dedicated Wiki page</a> and the <a href="https://gitlab.xfce.org/kelnos/xfwl4" target="_blank">work in progress source code</a>.</p>
 
-            <p>In case you are interested in more detailed reasoning, or you want to know all the tiny project details, feel free to take a look at the <a ref="https://wiki.xfce.org/private/wayland-compositor" target="_blank">dedicated Wiki page</a> and the <a ref="https://gitlab.xfce.org/kelnos/xfwl4" target="_blank">work in progress source code</a>.</p>
-
-            <p>We are looking forward to the future of Xfce on Wayland.</p>
+            <p>We’d like to extend our heartfelt thanks to our generous supporters on <a href="https://opencollective.com/xfce" target="_blank">Open Collective US</a> and <a href="https://opencollective.com/xfce-eu" target="_blank">Open Collective EU</a> for making this project possible!</p>
 
             <p>&nbsp;</p>
             <p>Best regards,</p>
